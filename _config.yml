@@ -1,0 +1,13 @@
+# Site settings
+title: Astrobiased
+email: ebressert@gmail.com
+author: Eli Bressert
+description: "Connecting the impossible"
+baseurl: ""
+url: "astrobiased.com"
+google_analytics: UA-37562516-1
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+paginate: 3
