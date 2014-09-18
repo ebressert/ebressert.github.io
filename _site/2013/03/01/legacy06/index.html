@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Javascript and coffee for scientists</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Connecting the impossible">
+    <meta name="author" content="Eli Bressert">
+    <link rel="canonical" href="http://astrobiased.com/2013/03/01/legacy06/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/basscss.css" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css" type="text/css">
+    <link rel="stylesheet" href="/css/solarized-dark.css" type="text/css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://astrobiased.com">Astrobiased</a>
+      <nav class="site-nav right">
+        <a href="/about">About</a>
+<a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        <div class="post-header mb2">
+  <h1 class="py2">Javascript and coffee for scientists</h1>
+  <span class="post-meta">Mar 1, 2013</span>
+</div>
+
+<article class="post-content">
+  <p>In the last few years, data visualization on the web has taken a new turn in interactivity. With javascript libraries like <a href="http://d3js.org/">D3.js</a> you can visualize data in unique ways statically and dynamically. Here’s one screen shot of such visualizations.</p>
+
+<p><img src="/assets/d3_example.png" alt="D3 example" /></p>
+
+<p>There are a lot more <em>interactive</em> examples that can be found on the <a href="https://github.com/mbostock/d3/wiki/Gallery">D3.js</a> website.</p>
+
+<p>As a scientist I’m using <a href="http://matplotlib.org/">Matplotlib</a> (Python based) for making publication plots, which is a fantastic package. It’s the bread and butter of making plots in Python. But, I do envy some of those capabilities that the web developers and designers can do with <a href="http://d3js.org/">D3.js</a>. So I made the decision to become more proficient at javascript to use D3.js. Wait … what I did say? Yep, javascript.</p>
+
+<p>For most astronomers, there is little need to know javascript as their work focuses on data analysis. Languages like Fortran and C used to be the most common languages for astronomers, but it’s fast changing with Python due to its high-level programming and available packages. So … why javascript. Python has some fantastic web framework libraries like Flask, Bottle, and Django. But, that’s for the back end of a website, not the front end which is a mash of HTML, CSS and javascript. The front end is where we see the amazing D3.js plots.</p>
+
+<p>Learning javascript is easier now, thanks to Coffeescript. If you’re a Python programmer, Coffeescript will be quite easy to learn. It’s a high-level version of javascript that is translated to javascript when compiled. I’ll admit, this setup will not be as easy as using Python, but the advantages of having a very powerful and fast web language at your fingertips is <strong>well</strong> worth it. Without further ado, we’ll now go over a simple script written in Python and javascript that do the same thing.</p>
+
+<h3 id="code-comparison">Code comparison</h3>
+
+<p>The first example is written in Python and the second is in Coffescript. The codes are simply calculating the vertexes of a polygon. If <code>sides = 3</code> then you will get a triangle, if <code>sides = 5</code> then you will get a pentagon and so forth.</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="lineno"> 1</span> <span class="kn">import</span> <span class="nn">math</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="c"># Defining a fuction</span>
+<span class="lineno"> 4</span> <span class="k">def</span> <span class="nf">polygon</span><span class="p">(</span><span class="n">sides</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)):</span>
+<span class="lineno"> 5</span>     <span class="c"># Setting up angles to iterate to get polygon</span>
+<span class="lineno"> 6</span>     <span class="n">circle</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+<span class="lineno"> 7</span>     <span class="n">angle</span> <span class="o">=</span> <span class="n">circle</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">sides</span><span class="p">)</span>
+<span class="lineno"> 8</span>     <span class="n">points</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span>     <span class="c"># With the polygon defined we iterate through</span>
+<span class="lineno">11</span>     <span class="c"># the sides to get the nth polygon we want.</span>
+<span class="lineno">12</span>     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sides</span><span class="p">):</span>
+<span class="lineno">13</span>         <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">angle</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="n">size</span><span class="p">)</span> <span class="o">+</span> <span class="n">center</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="lineno">14</span>         <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="n">size</span><span class="p">)</span> <span class="o">+</span> <span class="n">center</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="lineno">15</span>         <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">x</span> <span class="p">,</span> <span class="n">y</span><span class="p">])</span>
+<span class="lineno">16</span> 
+<span class="lineno">17</span>     <span class="k">return</span> <span class="n">points</span></code></pre></div>
+
+<p>Here’s the same function in Coffeescript.</p>
+
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="lineno"> 1</span> <span class="c1"># Defining a function</span>
+<span class="lineno"> 2</span> <span class="nv">polygon = </span><span class="nf">(sides, size, center) -&gt;</span>
+<span class="lineno"> 3</span>     <span class="c1"># Setting up angles to iterate to get polygon</span>
+<span class="lineno"> 4</span>     <span class="nv">circle = </span><span class="mi">2</span> <span class="o">*</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span>
+<span class="lineno"> 5</span>     <span class="nv">angle = </span><span class="nx">circle</span> <span class="o">/</span> <span class="nx">sides</span>
+<span class="lineno"> 6</span>     <span class="nv">points = </span><span class="p">[]</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span>     <span class="c1"># With the polygon defined we iterate through</span>
+<span class="lineno"> 9</span>     <span class="c1"># the sides to get the nth polygon we want.</span>
+<span class="lineno">10</span>     <span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">..</span><span class="nx">sides</span><span class="p">]</span>
+<span class="lineno">11</span>         <span class="nv">x = </span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">angle</span> <span class="o">*</span> <span class="nx">i</span><span class="p">)</span> <span class="o">*</span> <span class="nx">size</span><span class="p">)</span> <span class="o">+</span> <span class="nx">center</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="lineno">12</span>         <span class="nv">y = </span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">angle</span> <span class="o">*</span> <span class="nx">i</span><span class="p">)</span> <span class="o">*</span> <span class="nx">size</span><span class="p">)</span> <span class="o">+</span> <span class="nx">center</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="lineno">13</span>         <span class="nx">points</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;x&quot;</span><span class="o">:</span> <span class="nx">x</span><span class="p">,</span> <span class="s">&quot;y&quot;</span><span class="o">:</span> <span class="nx">y</span><span class="p">}</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span>     <span class="k">return</span> <span class="nx">points</span></code></pre></div>
+
+<p>Writing this script was my first stab at Coffeescript and I found it incredibly easy to get it working. If you’re intrigued, I’d suggest to look at the following online resources.</p>
+
+<ul>
+  <li><a href="http://coffeescript.org/">Official coffeescript website</a></li>
+  <li><a href="http://arcturo.github.com/library/coffeescript/">The little book on Coffeescript</a></li>
+  <li><a href="http://coffeescriptcookbook.com/">Coffeescript cook book</a></li>
+  <li><a href="http://autotelicum.github.com/Smooth-CoffeeScript/SmoothCoffeeScript.html">Smooth coffeescript - online book</a></li>
+</ul>
+
+<h3 id="installing-coffeescript">Installing Coffeescript</h3>
+<p>To get the Coffeescript compiler, where Coffeescript code is converted into javascript, you will need <a href="http://nodejs.org/">node.js</a> and <a href="https://npmjs.org/">npm</a>. For users on Linux you can easily get them installed via apt-get (Debian based) or something similar. For the OSX, the best way to do this is probably through <a href="http://mxcl.github.com/homebrew/">Homebrew</a> or <a href="http://www.macports.org/">Macports</a>.</p>
+
+<p>Once you have the node.js and npm installed then run npm to install Coffeescript.</p>
+
+<pre><code>npm install -g coffee-script
+</code></pre>
+
+<p>Now you’re ready to start writing Coffeescript!</p>
+
+<h3 id="writing-and-debugging">Writing and debugging</h3>
+<p>If you’re not familiar with writing websites, then you should probably try to follow the writing and debugging setup I’m about to describe. The ingredients are a web browser (Chrome, Safari, or Firefox+Firebug plugin), a text editor and an open terminal. Create a folder that has an html page called <em>example.html</em> here and a coffeescript file called <em>example.coffee</em>. In the html page you should have something like the following.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> <span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="lineno">2</span> <span class="nt">&lt;html&gt;</span>
+<span class="lineno">3</span> <span class="nt">&lt;head&gt;</span>
+<span class="lineno">4</span> <span class="nt">&lt;/head&gt;</span>
+<span class="lineno">5</span>     <span class="nt">&lt;body&gt;</span>
+<span class="lineno">6</span>     <span class="c">&lt;!-- example.coffee will be compiled to example.js --&gt;</span>
+<span class="lineno">7</span>     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;example.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="lineno">8</span>     <span class="nt">&lt;/body&gt;</span>
+<span class="lineno">9</span> <span class="nt">&lt;/html&gt;</span></code></pre></div>
+
+<p>In the example.coffee script we can use the code above with a slight change for saving the output.</p>
+
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="lineno"> 1</span> <span class="c1"># Defining a function</span>
+<span class="lineno"> 2</span> <span class="nv">polygon = </span><span class="nf">(sides, size, center) -&gt;</span>
+<span class="lineno"> 3</span>     <span class="c1"># Setting up angles to iterate to get polygon</span>
+<span class="lineno"> 4</span>     <span class="nv">circle = </span><span class="mi">2</span> <span class="o">*</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span>
+<span class="lineno"> 5</span>     <span class="nv">angle = </span><span class="nx">circle</span> <span class="o">/</span> <span class="nx">sides</span>
+<span class="lineno"> 6</span>     <span class="nv">points = </span><span class="p">[]</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span>     <span class="c1"># With the polygon defined we iterate through</span>
+<span class="lineno"> 9</span>     <span class="c1"># the sides to get the nth polygon we want.</span>
+<span class="lineno">10</span>     <span class="k">for</span> <span class="nx">i</span> <span class="k">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">..</span><span class="nx">sides</span><span class="p">]</span>
+<span class="lineno">11</span>         <span class="nv">x = </span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">angle</span> <span class="o">*</span> <span class="nx">i</span><span class="p">)</span> <span class="o">*</span> <span class="nx">size</span><span class="p">)</span> <span class="o">+</span> <span class="nx">center</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="lineno">12</span>         <span class="nv">y = </span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">angle</span> <span class="o">*</span> <span class="nx">i</span><span class="p">)</span> <span class="o">*</span> <span class="nx">size</span><span class="p">)</span> <span class="o">+</span> <span class="nx">center</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="lineno">13</span>         <span class="nx">points</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;x&quot;</span><span class="o">:</span> <span class="nx">x</span><span class="p">,</span> <span class="s">&quot;y&quot;</span><span class="o">:</span> <span class="nx">y</span><span class="p">}</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span>     <span class="k">return</span> <span class="nx">points</span>
+<span class="lineno">16</span> 
+<span class="lineno">17</span> <span class="c1"># The additional code</span>
+<span class="lineno">18</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">polygon</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span></code></pre></div>
+
+<p>Now you will need to setup the coffeescript compiler to actively compile your code every time you save the file. The output from the compiler will tell if it is successful or not. If not, it will tell you where you should (usually). In the directory where you will work in, run this command.</p>
+
+<pre><code>coffee --watch --compile example.coffee
+</code></pre>
+
+<p>If the code compiles, this will create <em>example.js</em>. Open the <em>example.html</em> page in your browser of choice and launch the debugger. Chrome and Safari come with the Webkit debugger called Developer Tools. In Firefox you will need Firebug installed. Look for the <em>log</em> button in the debugger and you should see the output from polygon.</p>
+
+<p>From there you should be able to start creating your own Coffeescript code. Next week we will take this one step farther to see what we can do with Coffeescript + D3.js.</p>
+
+</article>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="p2 wrap">
+    <div class="measure mt1 center">
+      <small>
+        Crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+        &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll.git">Github</a>.
+      </small>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-37562516-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>
