@@ -14,6 +14,6 @@ It covers the barebones of the two Python packages, which are
 often used for numerical analysis.
 
 Previously, I was an astrophysicist and researched how stars formed at
-some great places like [Harvard](http://www.cfa.harvard.edu/), 
-[Smithsonian](http://www.si.edu/), ESO](http://www.eso.org/public/),
+some great places like [Harvard](http://www.cfa.harvard.edu/),
+[Smithsonian](http://www.si.edu/), [ESO](http://www.eso.org/public/),
 [Exeter](http://www.exeter.ac.uk/), and [CSIRO](http://www.csiro.au/).
