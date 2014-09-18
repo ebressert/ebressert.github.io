@@ -18,5 +18,59 @@ historical posts putting them up (if they work).&lt;/p&gt;
         <guid isPermaLink="true">astrobiased.com/2014/09/01/first-post/</guid>
       </item>
     
+      <item>
+        <title>Python for data analysis on OSX</title>
+        <description>&lt;p&gt;Arranging a good Python setup on OSX for data analysis can be tough due to packages like NumPy, SciPy, and Matplotlib. After trial and error from personal experiences and teaching at workshops, I have found an easy setup that just works. This may not be the best setup for everyone, but for data analysts this is it.&lt;/p&gt;
+
+&lt;p&gt;For reference, this article was inspired by &lt;a href=&quot;http://jakevdp.github.com/blog/2013/02/02/setting-up-a-mac-for-python-development/&quot;&gt;Jake Vanderplas’s blog&lt;/a&gt; where he talked about setting up a Mac for Python development. The article is a great read with a healthy discussion in the comment section.&lt;/p&gt;
+
+&lt;h2 id=&quot;breakdown&quot;&gt;Breakdown&lt;/h2&gt;
+&lt;p&gt;The Python setup is broken into three components.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Macports&lt;/li&gt;
+  &lt;li&gt;Virtualenv&lt;/li&gt;
+  &lt;li&gt;Pip&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Macports will be used to install the complex binary Python packages (especially SciPy). Then we’ll use virtualenv to create a friendly environment for installing other Python packages through pip.&lt;/p&gt;
+
+&lt;h3 id=&quot;macports&quot;&gt;Macports&lt;/h3&gt;
+&lt;p&gt;On OSX you can easily install NumPy, SciPy, and Matplotlib through Macports. First install Macports by following these &lt;a href=&quot;http://www.macports.org/install.php&quot;&gt;instructions&lt;/a&gt;. You will need &lt;a href=&quot;https://developer.apple.com/xcode/&quot;&gt;Xcode&lt;/a&gt; and &lt;code&gt;command line tools&lt;/code&gt; installed for Macports since there will a fair amount of code compiling. Once you have Macports installed you should do the following.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo port selfupdate
+sudo port install py27-numpy py27-scipy py27-matplotlib
+          py27-virtualenv
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will take roughly an hour, so grab some coffee. I’m including virtualenv in the &lt;code&gt;port&lt;/code&gt; install to make sure that the virtualenv setup does not confused in the later steps.&lt;/p&gt;
+
+&lt;h3 id=&quot;virtualenv-and-pip&quot;&gt;Virtualenv and pip&lt;/h3&gt;
+&lt;p&gt;After Macports has done its job you should use &lt;code&gt;virtualenv&lt;/code&gt; to setup a friendly environment for installing additional packages.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;virtualenv-2.7 local --system-site-packages
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;--system-site-packages&lt;/code&gt; option makes the &lt;code&gt;local&lt;/code&gt; environment aware of the NumPy, SciPy, and Matplotlib packages that have been installed with &lt;code&gt;Macports&lt;/code&gt;. For the next step you will want to activate the &lt;code&gt;virtualenv&lt;/code&gt; environment. You can do this temporarily or permanently for whenever you launch your favorite terminal application. For the temporary activation should execute &lt;code&gt;source ~/local/bin/activate&lt;/code&gt; in your terminal.&lt;/p&gt;
+
+&lt;p&gt;If you want the virtualenv environment present whenever you open a new terminal then place the &lt;code&gt;source&lt;/code&gt; command in you .bashrc, .bash_profile, or .profile file. Assuming that you named the virtualenv folder “local”, you should see &lt;code&gt;(local)&lt;/code&gt; in your new terminal windows. To install a Python package through pip you simply do the following.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pip install somepackagename
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You’re all set from here. You should be able to install most packages without issues. If you download a package and you want to install it locally you can do&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pip install somepackagename/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and pip will recognize from the slash character that you mean a local install. This is particularly useful when you’re downloading packages from Github. If you run into a package that is tough to install due to dependencies it may be a good idea to see if it is available in Macports.&lt;/p&gt;
+
+&lt;p&gt;There is another fantastic package manager called &lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;Homebrew&lt;/a&gt;. It’s not mentioned here as I don’t use it, but if you’re curious go take a look. Just bear in mind that getting packages like SciPy can be trickier with Homebrew. If you’re interested in this route - take a look at &lt;a href=&quot;http://penandpants.com/2012/02/24/install-python/&quot;&gt;Matt Davis’s blog&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Feb 2013 00:00:00 -0800</pubDate>
+        <link>astrobiased.com/2013/02/05/legacy01/</link>
+        <guid isPermaLink="true">astrobiased.com/2013/02/05/legacy01/</guid>
+      </item>
+    
   </channel>
 </rss>

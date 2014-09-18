@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Python for data analysis on OSX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Connecting the impossible">
+    <meta name="author" content="Eli Bressert">
+    <link rel="canonical" href="astrobiased.com/2013/02/05/legacy01/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/basscss.css" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css" type="text/css">
+    <link rel="stylesheet" href="/css/solarized-dark.css" type="text/css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="astrobiased.com">Astrobiased</a>
+      <nav class="site-nav right">
+        <a href="/about">About</a>
+<a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        <div class="post-header mb2">
+  <h1 class="py2">Python for data analysis on OSX</h1>
+  <span class="post-meta">Feb 5, 2013</span>
+</div>
+
+<article class="post-content">
+  <p>Arranging a good Python setup on OSX for data analysis can be tough due to packages like NumPy, SciPy, and Matplotlib. After trial and error from personal experiences and teaching at workshops, I have found an easy setup that just works. This may not be the best setup for everyone, but for data analysts this is it.</p>
+
+<p>For reference, this article was inspired by <a href="http://jakevdp.github.com/blog/2013/02/02/setting-up-a-mac-for-python-development/">Jake Vanderplas’s blog</a> where he talked about setting up a Mac for Python development. The article is a great read with a healthy discussion in the comment section.</p>
+
+<h2 id="breakdown">Breakdown</h2>
+<p>The Python setup is broken into three components.</p>
+
+<ol>
+  <li>Macports</li>
+  <li>Virtualenv</li>
+  <li>Pip</li>
+</ol>
+
+<p>Macports will be used to install the complex binary Python packages (especially SciPy). Then we’ll use virtualenv to create a friendly environment for installing other Python packages through pip.</p>
+
+<h3 id="macports">Macports</h3>
+<p>On OSX you can easily install NumPy, SciPy, and Matplotlib through Macports. First install Macports by following these <a href="http://www.macports.org/install.php">instructions</a>. You will need <a href="https://developer.apple.com/xcode/">Xcode</a> and <code>command line tools</code> installed for Macports since there will a fair amount of code compiling. Once you have Macports installed you should do the following.</p>
+
+<pre><code>sudo port selfupdate
+sudo port install py27-numpy py27-scipy py27-matplotlib
+          py27-virtualenv
+</code></pre>
+
+<p>This will take roughly an hour, so grab some coffee. I’m including virtualenv in the <code>port</code> install to make sure that the virtualenv setup does not confused in the later steps.</p>
+
+<h3 id="virtualenv-and-pip">Virtualenv and pip</h3>
+<p>After Macports has done its job you should use <code>virtualenv</code> to setup a friendly environment for installing additional packages.</p>
+
+<pre><code>virtualenv-2.7 local --system-site-packages
+</code></pre>
+
+<p>The <code>--system-site-packages</code> option makes the <code>local</code> environment aware of the NumPy, SciPy, and Matplotlib packages that have been installed with <code>Macports</code>. For the next step you will want to activate the <code>virtualenv</code> environment. You can do this temporarily or permanently for whenever you launch your favorite terminal application. For the temporary activation should execute <code>source ~/local/bin/activate</code> in your terminal.</p>
+
+<p>If you want the virtualenv environment present whenever you open a new terminal then place the <code>source</code> command in you .bashrc, .bash_profile, or .profile file. Assuming that you named the virtualenv folder “local”, you should see <code>(local)</code> in your new terminal windows. To install a Python package through pip you simply do the following.</p>
+
+<pre><code>pip install somepackagename
+</code></pre>
+
+<p>You’re all set from here. You should be able to install most packages without issues. If you download a package and you want to install it locally you can do</p>
+
+<pre><code>pip install somepackagename/
+</code></pre>
+
+<p>and pip will recognize from the slash character that you mean a local install. This is particularly useful when you’re downloading packages from Github. If you run into a package that is tough to install due to dependencies it may be a good idea to see if it is available in Macports.</p>
+
+<p>There is another fantastic package manager called <a href="http://mxcl.github.com/homebrew/">Homebrew</a>. It’s not mentioned here as I don’t use it, but if you’re curious go take a look. Just bear in mind that getting packages like SciPy can be trickier with Homebrew. If you’re interested in this route - take a look at <a href="http://penandpants.com/2012/02/24/install-python/">Matt Davis’s blog</a>.</p>
+
+</article>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="p2 wrap">
+    <div class="measure mt1 center">
+      <small>
+        Crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+        &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll.git">Github</a>.
+      </small>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
