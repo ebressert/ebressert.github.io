@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Visualizing 3D data in yt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Connecting the impossible">
+    <meta name="author" content="Eli Bressert">
+    <link rel="canonical" href="http://astrobiased.com/2013/02/17/legacy03/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/basscss.css" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css" type="text/css">
+    <link rel="stylesheet" href="/css/solarized-dark.css" type="text/css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://astrobiased.com">Astrobiased</a>
+      <nav class="site-nav right">
+        <a href="/about">About</a>
+<a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        <div class="post-header mb2">
+  <h1 class="py2">Visualizing 3D data in yt</h1>
+  <span class="post-meta">Feb 17, 2013</span>
+</div>
+
+<article class="post-content">
+  <p>In astronomy observational data comes in many flavors. Ranging from X-ray to radio wavelengths, data can be captured in either 2D images or higher dimension data cubes. For the Chandra X-ray telescope, the data can be observed in 4D space: x, y, energy, and time. For radio data you can get velocity x, y, and velocity (line-of-sight). In fact, that is just scratching the surface. There’s a lot more information that can be gleaned from these datasets, but for now we will stick with that.</p>
+
+<p>Visualizing data that has more than two dimensions is not easy, since it requires complex programming and is computationally taxing. In the medical field scientists and doctors visualize data on their patients in 3D frequently, e.g., MRI scans. A cool example is the <a href="https://github.com/xtk/X#readme">X Toolkit</a> project, which is WebGL based. For astronomy, there are many packages that allow us to peruse 3D data such as <a href="http://hea-www.harvard.edu/RD/ds9/site/Home.html">DS9</a>, <a href="http://casa.nrao.edu/">CASA</a>, or <a href="http://astromed.iic.harvard.edu/">AstroMed</a>.</p>
+
+<p>Recenly, another program has been making a splash in 3D visualization field: <a href="http://yt-project.org/">yt</a>. It generates amazing renderings of numerical simulations in +3D space and it’s Python based. Here’s some eye candy to see what it is capable of.</p>
+
+<p><img src="https://bytebucket.org/yt_analysis/yt/wiki/images/Reion512_600px.png" alt="reion" /></p>
+
+<p><img src="https://bytebucket.org/yt_analysis/yt/wiki/images/firey_universe.png" alt="firey_universe" /></p>
+
+<p>I have kept an eye on yt for a while, but never used it as I’m looking for ways to visualize <strong>observational</strong> data. After a quick chat with <a href="https://sites.google.com/site/matthewturk/">Matthew Turk</a>, the creator of yt, I realized that porting observational data cubes to yt is <em>very</em> easy. In yt there is a function called <code>load_uniform_grid</code>. Here’s a quick example of how to load a <a href="http://en.wikipedia.org/wiki/FITS">FITS</a> data cube into yt’s data structure.</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="lineno">1</span> <span class="kn">from</span> <span class="nn">yt.frontends.stream.api</span> <span class="kn">import</span> <span class="n">load_uniform_grid</span>
+<span class="lineno">2</span> <span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
+<span class="lineno">3</span> 
+<span class="lineno">4</span> <span class="c"># Loading fits data</span>
+<span class="lineno">5</span> <span class="n">cube</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="s">&#39;some_data_cube.fits&#39;</span><span class="p">)</span>
+<span class="lineno">6</span> 
+<span class="lineno">7</span> <span class="c"># Porting the data cube structure to yt&#39;s data structure</span>
+<span class="lineno">8</span> <span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Density</span> <span class="o">=</span> <span class="n">cube</span><span class="p">)</span>
+<span class="lineno">9</span> <span class="n">pf</span> <span class="o">=</span> <span class="n">load_uniform_grid</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">cube</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="mf">9e16</span><span class="p">)</span></code></pre></div>
+
+<p>From there you can start visualizing your data in data slices, volume rendering and much more. Here’s a project rendering example of data (position, position, velocity map) on the nearby star-forming cloud, Perseus, from the <a href="http://www.cfa.harvard.edu/COMPLETE/">COMPLETE</a> survey.</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="lineno"> 1</span> <span class="kn">from</span> <span class="nn">yt.imods</span> <span class="kn">import</span> <span class="n">OffAxisProjectionPlot</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="c"># The vector normal to the slicing plane</span>
+<span class="lineno"> 4</span> <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]</span>
+<span class="lineno"> 5</span> 
+<span class="lineno"> 6</span> <span class="c"># The command to generate the off axis projection plot</span>
+<span class="lineno"> 7</span> <span class="n">p</span> <span class="o">=</span> <span class="n">OffAxisProjectionPlot</span><span class="p">(</span><span class="n">pf</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="s">&#39;Density&#39;</span><span class="p">)</span>
+<span class="lineno"> 8</span> 
+<span class="lineno"> 9</span> <span class="c"># Applying a grey colormap to all data</span>
+<span class="lineno">10</span> <span class="n">p</span><span class="o">.</span><span class="n">set_cmap</span><span class="p">(</span><span class="n">field</span><span class="o">=</span><span class="s">&#39;all&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">&#39;Greys&#39;</span><span class="p">)</span>
+<span class="lineno">11</span> 
+<span class="lineno">12</span> <span class="c"># Saving the image</span>
+<span class="lineno">13</span> <span class="n">p</span><span class="o">.</span><span class="n">save</span><span class="p">()</span></code></pre></div>
+
+<p><img src="/assets/yt_complete.png" alt="yt_complete" /></p>
+
+<p>The output here is less fancy than the two previous images and that’s because there are many options to tweak in yt to make it look better. Matthew Turk, tried a quick run on this and came up with a nice 3D volume rendering. Here’s the code and image output.</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="lineno"> 1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="lineno"> 2</span> <span class="kn">from</span> <span class="nn">yt.mods</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="lineno"> 3</span> <span class="kn">from</span> <span class="nn">yt.frontends.stream.api</span> <span class="kn">import</span> <span class="n">load_uniform_grid</span>
+<span class="lineno"> 4</span> <span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
+<span class="lineno"> 5</span> <span class="kn">from</span> <span class="nn">aplpy.image_util</span> <span class="kn">import</span> <span class="n">percentile_function</span>
+<span class="lineno"> 6</span> 
+<span class="lineno"> 7</span> <span class="c"># Loading fits data</span>
+<span class="lineno"> 8</span> <span class="n">cube</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="s">&#39;PerA_12coFCRAO_F_vxy.fits&#39;</span><span class="p">)</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span> <span class="c"># Masking out nan elements</span>
+<span class="lineno">11</span> <span class="n">cube</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">d</span><span class="p">)]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="lineno">12</span> 
+<span class="lineno">13</span> <span class="c"># Loading data into yt structure</span>
+<span class="lineno">14</span> <span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Density</span> <span class="o">=</span> <span class="n">cube</span><span class="p">)</span>
+<span class="lineno">15</span> <span class="n">pf</span> <span class="o">=</span> <span class="n">load_uniform_grid</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">cube</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="mf">9e16</span><span class="p">,</span> <span class="n">nprocs</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="lineno">16</span> 
+<span class="lineno">17</span> <span class="c"># Custom min and max to show using function in APLpy.</span>
+<span class="lineno">18</span> <span class="c"># Haven&#39;t used APLpy yet? Check it out at aplpy.github.com.</span>
+<span class="lineno">19</span> <span class="n">auto_v</span> <span class="o">=</span> <span class="n">percentile_function</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;Density&#39;</span><span class="p">])</span>
+<span class="lineno">20</span> <span class="n">mi</span><span class="p">,</span> <span class="n">ma</span> <span class="o">=</span> <span class="n">auto_v</span><span class="p">(</span><span class="mf">0.15</span><span class="p">),</span> <span class="n">auto_v</span><span class="p">(</span><span class="mf">99.95</span><span class="p">)</span>
+<span class="lineno">21</span> 
+<span class="lineno">22</span> <span class="c"># Setting up parameters for volume rendering. See the following</span>
+<span class="lineno">23</span> <span class="c"># link for more details on the parameters:</span>
+<span class="lineno">24</span> <span class="c"># http://yt-project.org/doc/cookbook/simple_plots.html#cookbook-simple-volume-rendering</span>
+<span class="lineno">25</span> <span class="n">tf</span> <span class="o">=</span> <span class="n">ColorTransferFunction</span><span class="p">((</span><span class="n">mi</span><span class="p">,</span> <span class="n">ma</span><span class="p">))</span>
+<span class="lineno">26</span> <span class="n">tf</span><span class="o">.</span><span class="n">add_layers</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="lineno">27</span> <span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]</span>
+<span class="lineno">28</span> <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]</span>
+<span class="lineno">29</span> <span class="n">W</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="lineno">30</span> <span class="n">Nvec</span> <span class="o">=</span> <span class="mi">512</span>
+<span class="lineno">31</span> <span class="n">cam</span> <span class="o">=</span> <span class="n">pf</span><span class="o">.</span><span class="n">h</span><span class="o">.</span><span class="n">camera</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">Nvec</span><span class="p">,</span> <span class="n">tf</span><span class="p">)</span>
+<span class="lineno">32</span> <span class="n">image</span> <span class="o">=</span> <span class="n">cam</span><span class="o">.</span><span class="n">snapshot</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">_volume_rendered.png&quot;</span> <span class="o">%</span> <span class="n">pf</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)</span></code></pre></div>
+
+<p><img src="/assets/yt_volume.png" alt="yt_volume" /></p>
+
+<p>If you want to see what other possibilities there are, then check out <a href="http://yt-project.org/doc/index.html">yt’s documentation</a>. The cool thing about yt is that it now accepts any type of 3D data cube, including the observational astronomy data. But it has become something more. It has become a tool that can be used for <strong>many</strong> more 3D visualization purposes.</p>
+
+</article>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="p2 wrap">
+    <div class="measure mt1 center">
+      <small>
+        Crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+        &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll.git">Github</a>.
+      </small>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-37562516-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

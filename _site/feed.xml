@@ -3,8 +3,8 @@
   <channel>
     <title>Astrobiased</title>
     <description>Connecting the impossible</description>
-    <link>astrobiased.com/</link>
-    <atom:link href="astrobiased.com/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://astrobiased.com/</link>
+    <atom:link href="http://astrobiased.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>New form factor</title>
@@ -14,8 +14,170 @@ historical posts putting them up (if they work).&lt;/p&gt;
 &lt;p&gt;In the meantime new posts will be coming soon.&lt;/p&gt;
 </description>
         <pubDate>Mon, 01 Sep 2014 00:00:00 -0700</pubDate>
-        <link>astrobiased.com/2014/09/01/first-post/</link>
-        <guid isPermaLink="true">astrobiased.com/2014/09/01/first-post/</guid>
+        <link>http://astrobiased.com/2014/09/01/first-post/</link>
+        <guid isPermaLink="true">http://astrobiased.com/2014/09/01/first-post/</guid>
+      </item>
+    
+      <item>
+        <title>Visualizing 3D data in yt</title>
+        <description>&lt;p&gt;In astronomy observational data comes in many flavors. Ranging from X-ray to radio wavelengths, data can be captured in either 2D images or higher dimension data cubes. For the Chandra X-ray telescope, the data can be observed in 4D space: x, y, energy, and time. For radio data you can get velocity x, y, and velocity (line-of-sight). In fact, that is just scratching the surface. There’s a lot more information that can be gleaned from these datasets, but for now we will stick with that.&lt;/p&gt;
+
+&lt;p&gt;Visualizing data that has more than two dimensions is not easy, since it requires complex programming and is computationally taxing. In the medical field scientists and doctors visualize data on their patients in 3D frequently, e.g., MRI scans. A cool example is the &lt;a href=&quot;https://github.com/xtk/X#readme&quot;&gt;X Toolkit&lt;/a&gt; project, which is WebGL based. For astronomy, there are many packages that allow us to peruse 3D data such as &lt;a href=&quot;http://hea-www.harvard.edu/RD/ds9/site/Home.html&quot;&gt;DS9&lt;/a&gt;, &lt;a href=&quot;http://casa.nrao.edu/&quot;&gt;CASA&lt;/a&gt;, or &lt;a href=&quot;http://astromed.iic.harvard.edu/&quot;&gt;AstroMed&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Recenly, another program has been making a splash in 3D visualization field: &lt;a href=&quot;http://yt-project.org/&quot;&gt;yt&lt;/a&gt;. It generates amazing renderings of numerical simulations in +3D space and it’s Python based. Here’s some eye candy to see what it is capable of.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://bytebucket.org/yt_analysis/yt/wiki/images/Reion512_600px.png&quot; alt=&quot;reion&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://bytebucket.org/yt_analysis/yt/wiki/images/firey_universe.png&quot; alt=&quot;firey_universe&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I have kept an eye on yt for a while, but never used it as I’m looking for ways to visualize &lt;strong&gt;observational&lt;/strong&gt; data. After a quick chat with &lt;a href=&quot;https://sites.google.com/site/matthewturk/&quot;&gt;Matthew Turk&lt;/a&gt;, the creator of yt, I realized that porting observational data cubes to yt is &lt;em&gt;very&lt;/em&gt; easy. In yt there is a function called &lt;code&gt;load_uniform_grid&lt;/code&gt;. Here’s a quick example of how to load a &lt;a href=&quot;http://en.wikipedia.org/wiki/FITS&quot;&gt;FITS&lt;/a&gt; data cube into yt’s data structure.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;yt.frontends.stream.api&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_uniform_grid&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;astropy.io&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fits&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Loading fits data&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getdata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;some_data_cube.fits&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Porting the data cube structure to yt&amp;#39;s data structure&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Density&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_uniform_grid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;9e16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;From there you can start visualizing your data in data slices, volume rendering and much more. Here’s a project rendering example of data (position, position, velocity map) on the nearby star-forming cloud, Perseus, from the &lt;a href=&quot;http://www.cfa.harvard.edu/COMPLETE/&quot;&gt;COMPLETE&lt;/a&gt; survey.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;yt.imods&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OffAxisProjectionPlot&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# The vector normal to the slicing plane&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# The command to generate the off axis projection plot&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OffAxisProjectionPlot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;Density&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Applying a grey colormap to all data&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_cmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;all&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Greys&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Saving the image&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/yt_complete.png&quot; alt=&quot;yt_complete&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The output here is less fancy than the two previous images and that’s because there are many options to tweak in yt to make it look better. Matthew Turk, tried a quick run on this and came up with a nice 3D volume rendering. Here’s the code and image output.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;yt.mods&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;yt.frontends.stream.api&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_uniform_grid&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;astropy.io&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fits&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;aplpy.image_util&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;percentile_function&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Loading fits data&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getdata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;PerA_12coFCRAO_F_vxy.fits&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Masking out nan elements&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isnan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nanmin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Loading data into yt structure&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Density&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_uniform_grid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;9e16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nprocs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;17&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Custom min and max to show using function in APLpy.&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;18&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Haven&amp;#39;t used APLpy yet? Check it out at aplpy.github.com.&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;19&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;auto_v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;percentile_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Density&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;auto_v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;auto_v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;99.95&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;21&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;22&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Setting up parameters for volume rendering. See the following&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;23&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# link for more details on the parameters:&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;24&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# http://yt-project.org/doc/cookbook/simple_plots.html#cookbook-simple-volume-rendering&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ColorTransferFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;26&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_layers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;27&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;28&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;29&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;W&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Nvec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;512&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;31&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cam&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;camera&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Nvec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;32&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;snapshot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;_volume_rendered.png&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/yt_volume.png&quot; alt=&quot;yt_volume&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to see what other possibilities there are, then check out &lt;a href=&quot;http://yt-project.org/doc/index.html&quot;&gt;yt’s documentation&lt;/a&gt;. The cool thing about yt is that it now accepts any type of 3D data cube, including the observational astronomy data. But it has become something more. It has become a tool that can be used for &lt;strong&gt;many&lt;/strong&gt; more 3D visualization purposes.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 17 Feb 2013 00:00:00 -0800</pubDate>
+        <link>http://astrobiased.com/2013/02/17/legacy03/</link>
+        <guid isPermaLink="true">http://astrobiased.com/2013/02/17/legacy03/</guid>
+      </item>
+    
+      <item>
+        <title>Simple ways of speeding up Python code</title>
+        <description>&lt;p&gt;Python shines as an easy-to-learn language since the syntax is readable and getting things done is straightforward. You don’t have to worry about the heavy baggage that comes along with Java, C and similar compiled languages. But, there are downsides as well and the primary one is &lt;em&gt;speed&lt;/em&gt;. Even with help from packages like NumPy, there may be a bottleneck. Here, I’ll go over a few simple tips to speeding up your code.&lt;/p&gt;
+
+&lt;h2 id=&quot;loops&quot;&gt;Loops&lt;/h2&gt;
+&lt;p&gt;One of the most common bottlenecks in Python’s speed are loops and there getting around loops will be impossible at times. Let’s go over a few examples of loops and how to speed them up.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# A standard loop
+storage = []
+for i in range(10000000):
+    storage.append(i * i)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The loop iterates from 0 to 9999999 and appends the output to &lt;code&gt;storage&lt;/code&gt;. If you’re not planning to (or cannot) use NumPy for this case then you would use &lt;code&gt;xrange&lt;/code&gt; instead of &lt;code&gt;range&lt;/code&gt;. The &lt;code&gt;range&lt;/code&gt; function creates a list, so it can be memory intensive with a large number of elements. The &lt;code&gt;xrange&lt;/code&gt; function is a number generator and only creates the numbers needed on the fly, which makes it much less memory intensive. This can naturally speed up loops when a large number of loops will be used.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# A standard loop
+storage = []
+for i in xrange(10000000):
+    storage.append(i * i)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The time difference between these two operations is not big, but if you have multiple loops the time savings adds up. Using the &lt;code&gt;%timeit&lt;/code&gt; command in IPython, I get 1.58 s for the &lt;code&gt;range&lt;/code&gt; example and 1.35 s for for the &lt;code&gt;xrange&lt;/code&gt; example. If you are planning to use NumPy (which is recommended) then the fastest speed up is the following.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import numpy as np
+arr = np.arange(10000000) * np.arange(10000000)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;IPython’s &lt;code&gt;%timeit&lt;/code&gt; result for this operation is 79 ms. NumPy is the obvious winner. If the program you’re coding cannot use NumPy then using &lt;code&gt;xrange&lt;/code&gt; is the next best option.&lt;/p&gt;
+
+&lt;h2 id=&quot;indexing-with-boolean-arguments&quot;&gt;Indexing with boolean arguments&lt;/h2&gt;
+&lt;p&gt;When I review other people’s code the biggest component that slows them down is how the arrays are modified. Imagine that you have an &lt;em&gt;N&lt;/em&gt; dimension array where you have random values that range between 0 and 1 for each element. If an element is less than 0.5 then you want that element to be set to 0. For loop fans, this would be the obvious solution.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import numpy as np
+arr = np.random.rand(100000)
+
+def filter(arr):
+    for i, val in enumerate(arr):
+        if val &amp;lt; 0.5:
+            arr[i] = 0
+    return arr
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The time it takes for this operation is 840 ms. With NumPy we are supposed to discard of loops when we can, so if you do the following then you will save a lot of execution time.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import numpy as np
+arr = np.random.rand(1000000)
+arr[arr &amp;lt; 0.5] = 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This method takes only 10.4 ms, which is a factor of 80 times faster than the the previous example. The example above is very simple in terms of boolean arguments, so what can we do when it becomes more complicated?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;import numpy as np
+arr = np.random.rand(1000000)
+index1 = arr &amp;lt; 0.8
+index2 = arr &amp;gt; 0.2
+index3 = arr == 0.9
+arr[~((index1 &amp;amp; index2) | index3)] = -1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We filtered the array for values in between 0.2 and 0.8, with the exception of any element that has a value of 0.9. Any other number is set to -1. With NumPy arrays we can use the &lt;code&gt;&amp;amp;&lt;/code&gt; symbol as the &lt;strong&gt;and&lt;/strong&gt; operator and the &lt;code&gt;|&lt;/code&gt; symbol as the &lt;strong&gt;or&lt;/strong&gt; operator. The tilde (&lt;code&gt;~&lt;/code&gt;) symbol acts as the &lt;strong&gt;not&lt;/strong&gt; operator. You can alternatively just return a new array without the elements that do not meet our criteria.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;arr2 = arr[(index1 &amp;amp; index2) | index3]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This type of slicing and indexing to modify arrays can work on whatever array structure you can come up with, whether it’s 1-D, 3-D, or higher.&lt;/p&gt;
+
+&lt;p&gt;As a quick side note: Using the &lt;code&gt;np.where&lt;/code&gt; function is another way of doing the examples above, but in most cases it will be a bit slower.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;If you apply the methods we covered above in your code you will get a significant speed up. Not all the problems you will run into are going to be plug-and-play, so you will have to be creative at times.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 Feb 2013 00:00:00 -0800</pubDate>
+        <link>http://astrobiased.com/2013/02/07/legacy02/</link>
+        <guid isPermaLink="true">http://astrobiased.com/2013/02/07/legacy02/</guid>
       </item>
     
       <item>
@@ -68,8 +230,8 @@ sudo port install py27-numpy py27-scipy py27-matplotlib
 &lt;p&gt;There is another fantastic package manager called &lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;Homebrew&lt;/a&gt;. It’s not mentioned here as I don’t use it, but if you’re curious go take a look. Just bear in mind that getting packages like SciPy can be trickier with Homebrew. If you’re interested in this route - take a look at &lt;a href=&quot;http://penandpants.com/2012/02/24/install-python/&quot;&gt;Matt Davis’s blog&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Tue, 05 Feb 2013 00:00:00 -0800</pubDate>
-        <link>astrobiased.com/2013/02/05/legacy01/</link>
-        <guid isPermaLink="true">astrobiased.com/2013/02/05/legacy01/</guid>
+        <link>http://astrobiased.com/2013/02/05/legacy01/</link>
+        <guid isPermaLink="true">http://astrobiased.com/2013/02/05/legacy01/</guid>
       </item>
     
   </channel>

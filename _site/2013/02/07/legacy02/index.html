@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simple ways of speeding up Python code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Connecting the impossible">
+    <meta name="author" content="Eli Bressert">
+    <link rel="canonical" href="http://astrobiased.com/2013/02/07/legacy02/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/basscss.css" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css" type="text/css">
+    <link rel="stylesheet" href="/css/solarized-dark.css" type="text/css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://astrobiased.com">Astrobiased</a>
+      <nav class="site-nav right">
+        <a href="/about">About</a>
+<a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        <div class="post-header mb2">
+  <h1 class="py2">Simple ways of speeding up Python code</h1>
+  <span class="post-meta">Feb 7, 2013</span>
+</div>
+
+<article class="post-content">
+  <p>Python shines as an easy-to-learn language since the syntax is readable and getting things done is straightforward. You don’t have to worry about the heavy baggage that comes along with Java, C and similar compiled languages. But, there are downsides as well and the primary one is <em>speed</em>. Even with help from packages like NumPy, there may be a bottleneck. Here, I’ll go over a few simple tips to speeding up your code.</p>
+
+<h2 id="loops">Loops</h2>
+<p>One of the most common bottlenecks in Python’s speed are loops and there getting around loops will be impossible at times. Let’s go over a few examples of loops and how to speed them up.</p>
+
+<pre><code># A standard loop
+storage = []
+for i in range(10000000):
+    storage.append(i * i)
+</code></pre>
+
+<p>The loop iterates from 0 to 9999999 and appends the output to <code>storage</code>. If you’re not planning to (or cannot) use NumPy for this case then you would use <code>xrange</code> instead of <code>range</code>. The <code>range</code> function creates a list, so it can be memory intensive with a large number of elements. The <code>xrange</code> function is a number generator and only creates the numbers needed on the fly, which makes it much less memory intensive. This can naturally speed up loops when a large number of loops will be used.</p>
+
+<pre><code># A standard loop
+storage = []
+for i in xrange(10000000):
+    storage.append(i * i)
+</code></pre>
+
+<p>The time difference between these two operations is not big, but if you have multiple loops the time savings adds up. Using the <code>%timeit</code> command in IPython, I get 1.58 s for the <code>range</code> example and 1.35 s for for the <code>xrange</code> example. If you are planning to use NumPy (which is recommended) then the fastest speed up is the following.</p>
+
+<pre><code>import numpy as np
+arr = np.arange(10000000) * np.arange(10000000)
+</code></pre>
+
+<p>IPython’s <code>%timeit</code> result for this operation is 79 ms. NumPy is the obvious winner. If the program you’re coding cannot use NumPy then using <code>xrange</code> is the next best option.</p>
+
+<h2 id="indexing-with-boolean-arguments">Indexing with boolean arguments</h2>
+<p>When I review other people’s code the biggest component that slows them down is how the arrays are modified. Imagine that you have an <em>N</em> dimension array where you have random values that range between 0 and 1 for each element. If an element is less than 0.5 then you want that element to be set to 0. For loop fans, this would be the obvious solution.</p>
+
+<pre><code>import numpy as np
+arr = np.random.rand(100000)
+
+def filter(arr):
+    for i, val in enumerate(arr):
+        if val &lt; 0.5:
+            arr[i] = 0
+    return arr
+</code></pre>
+
+<p>The time it takes for this operation is 840 ms. With NumPy we are supposed to discard of loops when we can, so if you do the following then you will save a lot of execution time.</p>
+
+<pre><code>import numpy as np
+arr = np.random.rand(1000000)
+arr[arr &lt; 0.5] = 0
+</code></pre>
+
+<p>This method takes only 10.4 ms, which is a factor of 80 times faster than the the previous example. The example above is very simple in terms of boolean arguments, so what can we do when it becomes more complicated?</p>
+
+<pre><code>import numpy as np
+arr = np.random.rand(1000000)
+index1 = arr &lt; 0.8
+index2 = arr &gt; 0.2
+index3 = arr == 0.9
+arr[~((index1 &amp; index2) | index3)] = -1
+</code></pre>
+
+<p>We filtered the array for values in between 0.2 and 0.8, with the exception of any element that has a value of 0.9. Any other number is set to -1. With NumPy arrays we can use the <code>&amp;</code> symbol as the <strong>and</strong> operator and the <code>|</code> symbol as the <strong>or</strong> operator. The tilde (<code>~</code>) symbol acts as the <strong>not</strong> operator. You can alternatively just return a new array without the elements that do not meet our criteria.</p>
+
+<pre><code>arr2 = arr[(index1 &amp; index2) | index3]
+</code></pre>
+
+<p>This type of slicing and indexing to modify arrays can work on whatever array structure you can come up with, whether it’s 1-D, 3-D, or higher.</p>
+
+<p>As a quick side note: Using the <code>np.where</code> function is another way of doing the examples above, but in most cases it will be a bit slower.</p>
+
+<h2 id="summary">Summary</h2>
+<p>If you apply the methods we covered above in your code you will get a significant speed up. Not all the problems you will run into are going to be plug-and-play, so you will have to be creative at times.</p>
+
+</article>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="p2 wrap">
+    <div class="measure mt1 center">
+      <small>
+        Crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+        &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll.git">Github</a>.
+      </small>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-37562516-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

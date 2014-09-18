@@ -10,4 +10,4 @@ google_analytics: "UA-37562516-1"
 # Build settings
 markdown: kramdown
 permalink: pretty
-paginate: 3
+paginate: 5
