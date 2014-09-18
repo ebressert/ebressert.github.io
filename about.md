@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 My name is [Eli](https://twitter.com/astrobiased) and I'm data scientist at
-[Stitch Fix](http://technology.stitchfix.com/), leading the Data Labs division.
+[Stitch Fix](http://technology.stitchfix.com/), leading Data Labs. 
 We're working on novel challenges with an amazing team. If you're interested in
 what we do, check out Stitch Fix's [technology page](http://technology.stitchfix.com/).
 
