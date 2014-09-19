@@ -19,6 +19,41 @@ historical posts putting them up (if they work).&lt;/p&gt;
       </item>
     
       <item>
+        <title>Writing papers with Authorea - batteries included</title>
+        <description>&lt;p&gt;In the summer of 2012 I was at the the fourth &lt;a href=&quot;http://dotastronomy.com/&quot;&gt;.Astronomy&lt;/a&gt; meeting in Heidelberg, Germany. It’s a meeting where some of the most exciting and cutting-edge ideas about astronomy and the web are discussed. It’s a bit like &lt;a href=&quot;http://www.ted.com/&quot;&gt;TED&lt;/a&gt;, but more informal where think tanking is done through unconference sessions. In between the crazy schedule, I had time to chat with Alberto Pepe, a post-doc working at Harvard. He had something to show me.&lt;/p&gt;
+
+&lt;p&gt;We sat down and opened up his laptop. I saw the alpha version of what is now known as &lt;a href=&quot;https://www.authorea.com/&quot;&gt;Authorea&lt;/a&gt; (it didn’t have a name then). Already, I could see that it had great potential and I was very excited about it. He asked if I’d be interested in acting as a consultant for ideas regarding Python and plotting. I couldn’t say no to such a cool project, so I joined the team. &lt;a href=&quot;http://albertopepe.com/&quot;&gt;Alberto Pepe&lt;/a&gt; and Nathan Jenkins are the co-founders (the powerhouses of the project) and &lt;a href=&quot;http://www.matteocantiello.com/&quot;&gt;Matteo Cantiello&lt;/a&gt; and I are the consultants.&lt;/p&gt;
+
+&lt;p&gt;Fast forward to today. Authorea has developed rapidly and it has received a lot of attention through a &lt;a href=&quot;https://www.authorea.com/users/23/articles/249/_show_article&quot;&gt;big science paper&lt;/a&gt; and being on the &lt;a href=&quot;http://news.ycombinator.com/item?id=5335304&quot;&gt;front page&lt;/a&gt; of Hacker News. Why? Because of what it is and what it will become.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/authorea.jpg&quot; alt=&quot;authorea.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-authorea&quot;&gt;What is Authorea?&lt;/h3&gt;
+&lt;p&gt;In just a few words, Authorea has been made to simplify every aspect of writing a publication quality paper from beginning to end. This includes writing with a team of collaborators, commenting, versioning of text, data, and figures (git), and pushing out your end product with just a push of a button.&lt;/p&gt;
+
+&lt;p&gt;Here are some examples of Authorea’s capabilities.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.authorea.com/users/3/articles/146/_show_article&quot;&gt;LaTeX and Markdown writing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.authorea.com/users/1/articles/522/_show_article&quot;&gt;Dynamic figures with D3.js&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.authorea.com/users/23/articles/249/_show_article&quot;&gt;Publication quality online papers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.authorea.com/users/23/articles/249/_show_article_feed&quot;&gt;Versioning&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Being able to see the output of your paper in realtime as you write makes it easy to see how your paper is coming together. Furthermore having the option of writing in Markdown or LaTeX is great. If you write a lot on the web, it’s likely that you use Markdown frequently.&lt;/p&gt;
+
+&lt;p&gt;In Authorea, the authors can include dynamic figures in the form of javascript code, like &lt;a href=&quot;http://d3js.org/&quot;&gt;D3.js&lt;/a&gt;. This feature makes representing data that is usually tough to depict in static plots much easier and interactive. Additionally, such plots will provide the data and code to the readers by default. It makes the ability to reproduce the plots straightforward. Something that is often lacking in today’s science literature.&lt;/p&gt;
+
+&lt;p&gt;In the science community, the usual procedure of getting a paper ready for publication requires multiple steps of getting it ready for the journal and the arXiv (or similar service). The format requirements for both avenues are usually not the same, so this stage can be a time drainer and headache. Authorea will allow the author to get all formats ready with the touch of a button. This feature is not yet ready, but will be soon.&lt;/p&gt;
+
+&lt;p&gt;If you want to stay up to date on what’s happening with Authorea you should follow the project on &lt;a href=&quot;https://twitter.com/authorea&quot;&gt;Twitter&lt;/a&gt; or &lt;a href=&quot;https://www.facebook.com/Authorea&quot;&gt;Facebook&lt;/a&gt;. Moreover, the Authorea creators are keen on getting feedback and feature requests from the users. Give them a shout!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 Mar 2013 00:00:00 -0800</pubDate>
+        <link>http://astrobiased.com/2013/03/07/legacy07/</link>
+        <guid isPermaLink="true">http://astrobiased.com/2013/03/07/legacy07/</guid>
+      </item>
+    
+      <item>
         <title>Javascript and coffee for scientists</title>
         <description>&lt;p&gt;In the last few years, data visualization on the web has taken a new turn in interactivity. With javascript libraries like &lt;a href=&quot;http://d3js.org/&quot;&gt;D3.js&lt;/a&gt; you can visualize data in unique ways statically and dynamically. Here’s one screen shot of such visualizations.&lt;/p&gt;
 
