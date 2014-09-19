@@ -19,6 +19,479 @@ historical posts putting them up (if they work).&lt;/p&gt;
       </item>
     
       <item>
+        <title>From stars to data</title>
+        <description>&lt;p&gt;It’s done and dusted. I have just made the decision to leave astronomy and embark on a journey to become a data scientist. It was something that has been brewing in my mind for a while. The opportunity to make the switch came up a few weeks ago and I took it.&lt;/p&gt;
+
+&lt;p&gt;I’ll admit it wasn’t an easy decision. I really enjoy working as an astronomer and invested so much of my blood and sweat in the field. It’s hard to say good bye to the warm atmosphere in the science community, colleagues, friends, and the fun collaborations. A lot to leave behind. But, my interest in data science and the tech industry has been growing. Talking about the tech industry with those who are already in it gave me a good idea what the expectations are and what I would be doing. After many discussions with close friends and family, I decided to commit myself to data science.&lt;/p&gt;
+
+&lt;p&gt;During my astronomy career I wrote a Python book on &lt;a href=&quot;http://shop.oreilly.com/product/0636920020219.do&quot;&gt;SciPy and NumPy&lt;/a&gt;, tools that people can use to for data analysis. As a consultant for the up and coming startup company, &lt;a href=&quot;https://www.authorea.com/&quot;&gt;Authorea&lt;/a&gt;, I have helped out with building a platform to write academic articles in your browser for open science and the implementation of cool technologies like D3.js.&lt;/p&gt;
+
+&lt;p&gt;For the last half year I have lead a project with an amazing team called Raspberry Sky, that will become public in a few months. Raspberry Sky creates an extensive amount of data from around the world that data scientists and astronomers would love to get their hands on.&lt;/p&gt;
+
+&lt;p&gt;Reflecting on where I was heading with my career, I realized that data science is for me. But, I’m not quite there yet. I’m about to begin an intensive six week schedule at the &lt;a href=&quot;http://insightdatascience.com/&quot;&gt;Insight Data Science Fellows Program&lt;/a&gt;. It will be an exciting and intense period, where I will learn what makes science data tick. I’m not sure where I will end up in Silicon Valley yet, but wherever it will be it’s gonna be a lot of fun.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 26 Aug 2013 00:00:00 -0700</pubDate>
+        <link>http://astrobiased.com/2013/08/26/legacy12/</link>
+        <guid isPermaLink="true">http://astrobiased.com/2013/08/26/legacy12/</guid>
+      </item>
+    
+      <item>
+        <title>Finding the extragalactic beast</title>
+        <description>&lt;p&gt;While I was a science imager for the &lt;a href=&quot;http://chandra.harvard.edu/&quot;&gt;Chandra X-ray Observatory&lt;/a&gt;, &lt;a href=&quot;http://www.mpia.de/homes/robitaille/index.html&quot;&gt;Thomas Robitaille&lt;/a&gt; and I teamed up to make a &lt;strong&gt;big&lt;/strong&gt; image of the Large Magellanic Cloud using &lt;a href=&quot;http://www.spitzer.caltech.edu/&quot;&gt;Spitzer Space Telescope&lt;/a&gt; data from the &lt;a href=&quot;http://sage.stsci.edu/&quot;&gt;SAGE Survey&lt;/a&gt;. It’s a galaxy that’s only 150,000 light years away from us. Trust me, it’s close in astronomical terms. Why did we do it? To have some fun and placate our curiosity on what we could come up with.&lt;/p&gt;
+
+&lt;p&gt;Tom handled the data reduction along with some tricky image cleaning for science-grade results. I put the data through Python, Pixelmator, and Photoshop to make the color image, which Tom and I thought looked good. We never had the chance to share it publicly, so we’re doing it now. Below you can peruse through the 16,000 x 16,000 pixel image of the Large Magellanic Cloud.&lt;/p&gt;
+
+&lt;iframe width=&quot;750&quot; height=&quot;320&quot; src=&quot;http://hugepic.io/bfc195a2b/3.00/70.02/0.00?embedded=1&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;You can see the full browser view &lt;a href=&quot;http://hugepic.io/bfc195a2b/3.00/6.14/21.01&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-twist-find-the-beast-and-win-a-prize&quot;&gt;The Twist: Find the beast and win a prize&lt;/h2&gt;
+&lt;p&gt;A few people (&lt;a href=&quot;http://www.sciencesortof.com/about/about-ryan/&quot;&gt;Ryan&lt;/a&gt;, &lt;a href=&quot;http://www.sciencesortof.com/about/about-patrick/&quot;&gt;Patrick&lt;/a&gt;, and I) thought it would be nice to throw in a golden egg in the image. Ever heard of the &lt;a href=&quot;http://www.sciencesortof.com/&quot;&gt;Science … sort of&lt;/a&gt; podcast? If not, go over to their website and download a show. It’s a great and entertaining podcast as the hosts chat about odd science topics over beer. They have a knowledgeable team of people who all have scientific backgrounds ranging from planetary science to the study of sloths. The podcast’s motto is “[a] podcast about things that are science and things that are sort of science”&lt;/p&gt;
+
+&lt;p&gt;Science … sort of’s mascot is a strange looking beast called the Brachiolope. You can see an image of this on their &lt;a href=&quot;http://www.sciencesortof.com/about/about-ryan/&quot;&gt;website’s&lt;/a&gt; header or their Brachiolope &lt;a href=&quot;http://www.sciencesortof.com/brachiolope-gallery/&quot;&gt;gallery&lt;/a&gt;. This beast is placed somewhere in the Large Magellanic Cloud image above as a nebulous structure. If you find the Brachiolope and send &lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#101;&amp;#108;&amp;#105;&amp;#064;&amp;#097;&amp;#115;&amp;#116;&amp;#114;&amp;#111;&amp;#098;&amp;#105;&amp;#097;&amp;#115;&amp;#101;&amp;#100;&amp;#046;&amp;#099;&amp;#111;&amp;#109;&quot;&gt;us&lt;/a&gt; a screen-shot of it, you may win a prize!&lt;/p&gt;
+
+&lt;p&gt;The prizes will range from a copy of my &lt;a href=&quot;http://shop.oreilly.com/product/0636920020219.do&quot;&gt;SciPy and NumPy book&lt;/a&gt; to Science … sort of goodies like a special edition astronomy-themed t-shirt or mug. Among those who send the screen-shot, we’ll randomly select five winners. The winners will be selected and notified at the end of next week. Good luck in finding the Dark Brachiolope Nebula!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 05 Apr 2013 00:00:00 -0700</pubDate>
+        <link>http://astrobiased.com/2013/04/05/legacy11/</link>
+        <guid isPermaLink="true">http://astrobiased.com/2013/04/05/legacy11/</guid>
+      </item>
+    
+      <item>
+        <title>Dynamic D3.js for scientists</title>
+        <description>&lt;p&gt;Previously, I wrote up a short tutorial on how to use &lt;a href=&quot;http://d3js.org/&quot;&gt;D3.js&lt;/a&gt; with &lt;a href=&quot;http://coffeescript.org/&quot;&gt;Coffeescript&lt;/a&gt;. The examples were simple and in static form, which is what scientists are generally used to regarding figures that are found in papers and presentations. Today, we’ll go over the process of making visualization dynamic. If this is your first time on the blog, I would suggest to take a look at &lt;em&gt;&lt;a href=&quot;http://astrobiased.com/Coffeescript-for-scientists.html&quot;&gt;Coffeescript for scientists&lt;/a&gt;&lt;/em&gt; and &lt;em&gt;&lt;a href=&quot;http://astrobiased.com/d3-for-scientists.html&quot;&gt;D3.js for scientists&lt;/a&gt;&lt;/em&gt; for the background material.&lt;/p&gt;
+
+&lt;h2 id=&quot;transitions&quot;&gt;Transitions&lt;/h2&gt;
+&lt;p&gt;Visualizations can be dynamic in many ways, but here will focus on a set of simple topics for the beginning such as changes in shape, color, and position. In the previous D3.js example we learned how to make basic shapes with color properties and here will change those circles with some attribute and style definitions.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-coffeescript&quot; data-lang=&quot;coffeescript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;polygon = &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;(sides, size, radius, center) -&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt;     &lt;span class=&quot;nv&quot;&gt;circle = &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PI&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;     &lt;span class=&quot;nv&quot;&gt;angle = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;circle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sides&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;     &lt;span class=&quot;nv&quot;&gt;points = &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sides&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt;         &lt;span class=&quot;nv&quot;&gt;x = &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;angle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;         &lt;span class=&quot;nv&quot;&gt;y = &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;angle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;         &lt;span class=&quot;nx&quot;&gt;points&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;y&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;points&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;polyData = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;polygon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;svg1 = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#experimental-circles-only&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;svg&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;17&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;width&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;18&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;height&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;19&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;circles = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;svg1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;circle&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;21&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;polyData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;22&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;enter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;23&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;circle&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;24&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;gray&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;25&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stroke&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;26&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stroke-width&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;27&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;28&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;circleAttributes = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;circles&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;29&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cx&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;30&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cy&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;31&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The part that we’re adding here is the following.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-coffeescript&quot; data-lang=&quot;coffeescript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;circlesTrans = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;circles&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;lightblue&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;With just this simple addition we can add a new dimension to the graphic. If you hit reload you will see what happens below.&lt;/p&gt;
+
+&lt;div id=&quot;color-size&quot; style=&quot;width: 400px; height: 400px&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;The circles transition from a light-gray color to light-blue. At the same time the size of the circles increase by three radii. We did this by calling the &lt;code&gt;style()&lt;/code&gt; and &lt;code&gt;attr()&lt;/code&gt; functions with new input values after the &lt;code&gt;transition()&lt;/code&gt; call. While this example is nice and straightforward, it’s limited. You obviously would not see the transition on this page at first due to the length of the document and the placement of the graphic. Let’s make it a bit interactive.&lt;/p&gt;
+
+&lt;p&gt;Below is the same code as above, but with a few additional lines. Here, we are using the &lt;code&gt;on()&lt;/code&gt; function which makes d3.js elements receptive to interactions. When you hover over the circles, they will fade to red. Upon leaving the circles, they will fade back gray and when you click on a circle it will turn blue and grow in size.&lt;/p&gt;
+
+&lt;div id=&quot;color-size-click&quot; style=&quot;width: 400px; height: 400px&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-coffeescript&quot; data-lang=&quot;coffeescript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;circleActions = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;circleAttributes&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mouseover&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;() -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mouseout&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;() -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;gray&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mousedown&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;() -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt;     &lt;span class=&quot;nx&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt;     &lt;span class=&quot;nx&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt;     &lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;lightblue&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;8&lt;/span&gt;     &lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that the &lt;code&gt;transition()&lt;/code&gt; function allows the changes to operate with controlled timing and and/or delays. Without the &lt;code&gt;transition()&lt;/code&gt; function the changes will be abrupt. Let’s simplify the code a bit by removing the &lt;code&gt;&quot;mouseover&quot;&lt;/code&gt;/&lt;code&gt;&quot;mouseout&quot;&lt;/code&gt; transitions and make the circles return to its original size after some given time.&lt;/p&gt;
+
+&lt;div id=&quot;color-size-click-shrink&quot; style=&quot;width: 400px; height: 400px&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-coffeescript&quot; data-lang=&quot;coffeescript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;circleActions = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;circleAttributes&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;click&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;() -&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;     &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;lightblue&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;end&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;() -&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;         &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;gray&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In the code, there’s a new component called &lt;code&gt;each()&lt;/code&gt; with the option of &lt;code&gt;&quot;end&quot;&lt;/code&gt;. This allows us to click on each of the circles and have them execute their transitions. The &lt;code&gt;&quot;end&quot;&lt;/code&gt; bit means that at the &lt;strong&gt;end&lt;/strong&gt; of the prior transition execute the current transition separately. For those not too familiar with D3.js you’re likely questioning what &lt;code&gt;d3.select(this)&lt;/code&gt; does. It makes the operation refer back to the current DOM element. It’s an easy way of working with your code without having to make complex callings to elements all the time.&lt;/p&gt;
+
+&lt;p&gt;Last but not least, here’s another example with motion from point &lt;em&gt;A&lt;/em&gt; to &lt;em&gt;B&lt;/em&gt;. The transitions from the previous example where the circles grow and shrink with color fading is included.&lt;/p&gt;
+
+&lt;div id=&quot;color-size-click-transform&quot; style=&quot;width: 400px; height: 400px&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-coffeescript&quot; data-lang=&quot;coffeescript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;circleActions = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;circleAttributes&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;click&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;() -&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;     &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;transform&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;translate(100,100)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;lightblue&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;end&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;() -&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;         &lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;gray&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;transform&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;translate(0,0)&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The &lt;code&gt;translate()&lt;/code&gt; function is the change in position relative to the element’s (circles) initial position. That’s why &lt;code&gt;translate(0,0)&lt;/code&gt; sends the circles back to their initial position.&lt;/p&gt;
+
+&lt;p&gt;From here there are &lt;em&gt;many&lt;/em&gt; ways that you can expand on what’s possible with D3.js on transitions and interactivity. In the coming weeks I’ll focus more on scientific purposes for data visualization with dynamic options. If you’re starving for more and can’t wait, go check out (a little knowledge of JS is needed) &lt;a href=&quot;http://bl.ocks.org/djvanderlaan/4953593&quot;&gt;this&lt;/a&gt; and &lt;a href=&quot;http://dan.iel.fm/bart/js/&quot;&gt;that&lt;/a&gt;. You can download the Coffeescript, JS, and HTML code used for this post &lt;a href=&quot;https://github.com/ebressert/coffee4scientists&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;script src=&quot;http://d3js.org/d3.v3.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+// Generated by CoffeeScript 1.4.0
+(function() {
+  var circleActions, circleAttributes, circles, circlesActions, polyData, polygon, svg1, svg2, svg3, svg4;
+
+  polygon = function(sides, size, radius, center) {
+    var angle, circle, i, points, x, y, _i, _ref;
+    circle = 2 * Math.PI;
+    angle = circle / sides;
+    points = [];
+    for (i = _i = 0, _ref = sides - 1; 0 &lt;= _ref ? _i &lt;= _ref : _i &gt;= _ref; i = 0 &lt;= _ref ? ++_i : --_i) {
+      x = (Math.cos(angle * i) * size) + center[0];
+      y = (Math.sin(angle * i) * size) + center[1];
+      points[i] = {
+        &quot;x&quot;: x,
+        &quot;y&quot;: y,
+        &quot;r&quot;: radius
+      };
+    }
+    return points;
+  };
+
+  polyData = polygon(6, 120, 20, [200, 200]);
+
+  svg1 = d3.select(&quot;#color-size&quot;).append(&quot;svg&quot;).attr(&quot;width&quot;, 400).attr(&quot;height&quot;, 400);
+
+  circles = svg1.selectAll(&quot;circle&quot;).data(polyData).enter().append(&quot;circle&quot;).style(&quot;fill&quot;, &quot;gray&quot;).style(&quot;stroke&quot;, &quot;none&quot;).style(&quot;stroke-width&quot;, 2);
+
+  circleAttributes = circles.attr(&quot;cx&quot;, function(d) {
+    return d.x;
+  }).attr(&quot;cy&quot;, function(d) {
+    return d.y;
+  }).attr(&quot;r&quot;, function(d) {
+    return d.r;
+  });
+
+  circlesActions = circles.transition().delay(1000).duration(2000).style(&quot;fill&quot;, &quot;lightblue&quot;).attr(&quot;r&quot;, function(d) {
+    return d.r * 3;
+  });
+
+  svg2 = d3.select(&quot;#color-size-click&quot;).append(&quot;svg&quot;).attr(&quot;width&quot;, 400).attr(&quot;height&quot;, 400);
+
+  circles = svg2.selectAll(&quot;circle&quot;).data(polyData).enter().append(&quot;circle&quot;).style(&quot;fill&quot;, &quot;gray&quot;).style(&quot;stroke&quot;, &quot;none&quot;).style(&quot;stroke-width&quot;, 2);
+
+  circleAttributes = circles.attr(&quot;cx&quot;, function(d) {
+    return d.x;
+  }).attr(&quot;cy&quot;, function(d) {
+    return d.y;
+  }).attr(&quot;r&quot;, function(d) {
+    return d.r;
+  });
+
+  circleActions = circleAttributes.on(&quot;mouseover&quot;, function() {
+    return d3.select(this).transition().duration(500).style(&quot;fill&quot;, &quot;red&quot;);
+  }).on(&quot;mouseout&quot;, function() {
+    return d3.select(this).transition().duration(500).style(&quot;fill&quot;, &quot;gray&quot;);
+  }).on(&quot;mousedown&quot;, function() {
+    return d3.select(this).transition().duration(500).style(&quot;fill&quot;, &quot;lightblue&quot;).attr(&quot;r&quot;, function(d) {
+      return d.r * 3;
+    });
+  });
+
+  svg3 = d3.select(&quot;#color-size-click-shrink&quot;).append(&quot;svg&quot;).attr(&quot;width&quot;, 400).attr(&quot;height&quot;, 400);
+
+  circles = svg3.selectAll(&quot;circle&quot;).data(polyData).enter().append(&quot;circle&quot;).style(&quot;fill&quot;, &quot;gray&quot;).style(&quot;stroke&quot;, &quot;none&quot;).style(&quot;stroke-width&quot;, 2);
+
+  circleAttributes = circles.attr(&quot;cx&quot;, function(d) {
+    return d.x;
+  }).attr(&quot;cy&quot;, function(d) {
+    return d.y;
+  }).attr(&quot;r&quot;, function(d) {
+    return d.r;
+  });
+
+  circleActions = circleAttributes.on(&quot;click&quot;, function() {
+    return d3.select(this).transition().duration(500).style(&quot;fill&quot;, &quot;lightblue&quot;).attr(&quot;r&quot;, function(d) {
+      return d.r * 3;
+    }).each(&quot;end&quot;, function() {
+      return d3.select(this).transition().duration(500).style(&quot;fill&quot;, &quot;gray&quot;).attr(&quot;r&quot;, function(d) {
+        return d.r * 1;
+      });
+    });
+  });
+
+  svg4 = d3.select(&quot;#color-size-click-transform&quot;).append(&quot;svg&quot;).attr(&quot;width&quot;, 400).attr(&quot;height&quot;, 400);
+
+  circles = svg4.selectAll(&quot;circle&quot;).data(polyData).enter().append(&quot;circle&quot;).style(&quot;fill&quot;, &quot;gray&quot;).style(&quot;stroke&quot;, &quot;none&quot;).style(&quot;stroke-width&quot;, 2);
+
+  circleAttributes = circles.attr(&quot;cx&quot;, function(d) {
+    return d.x;
+  }).attr(&quot;cy&quot;, function(d) {
+    return d.y;
+  }).attr(&quot;r&quot;, function(d) {
+    return d.r;
+  });
+
+  circleActions = circleAttributes.on(&quot;click&quot;, function() {
+    return d3.select(this).transition().duration(500).attr(&quot;transform&quot;, function(d) {
+      return &quot;translate(100,100)&quot;;
+    }).attr(&quot;r&quot;, function(d) {
+      return d.r * 3;
+    }).style(&quot;fill&quot;, &quot;lightblue&quot;).each(&quot;end&quot;, function() {
+      return d3.select(this).transition().duration(300).style(&quot;fill&quot;, &quot;gray&quot;).attr(&quot;r&quot;, function(d) {
+        return d.r * 1;
+      }).attr(&quot;transform&quot;, function(d) {
+        return &quot;translate(0,0)&quot;;
+      }).attr(&quot;r&quot;, function(d) {
+        return d.r * 1;
+      });
+    });
+  });
+
+}).call(this);
+
+&lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 01 Apr 2013 00:00:00 -0700</pubDate>
+        <link>http://astrobiased.com/2013/04/01/legacy10/</link>
+        <guid isPermaLink="true">http://astrobiased.com/2013/04/01/legacy10/</guid>
+      </item>
+    
+      <item>
+        <title>Finding Comet PANSTARRS</title>
+        <description>&lt;p&gt;In the last few weeks, there’s been a lot of public attention focused on the PANSTARRS comet. It’s now visible to the naked eye if you’re in the &lt;a href=&quot;http://blog.barentsen.be/2013/03/05/map-when-can-you-see-comet-panstarrs/&quot;&gt;right place at the right time&lt;/a&gt;. Sounds tricky right? Fortunately, one great piece of software called &lt;a href=&quot;http://www.stellarium.org/&quot;&gt;Stellarium&lt;/a&gt; that gives you a good idea of where to look based your location and time, visually. It couldn’t get much easier. The downside is that comets are not installed with Stellarium by default. Below I will outline the steps needed to get Stellarium comet-friendly. If you don’t have Stellarium, you can get it for &lt;strong&gt;free&lt;/strong&gt; &lt;a href=&quot;http://www.stellarium.org/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;turning-on-the-comet-wisdom&quot;&gt;Turning on the comet wisdom&lt;/h3&gt;
+&lt;p&gt;Stellarium comes with a plugin installed to show you comet locations in the sky relative to where you are at any time. Here’s how we do it. Go to &lt;em&gt;configuration window&lt;/em&gt; &amp;gt; &lt;em&gt;solar system editor&lt;/em&gt; &amp;gt; &lt;em&gt;options&lt;/em&gt; &amp;gt; &lt;em&gt;configure&lt;/em&gt; &amp;gt; &lt;em&gt;import orbital elements in MPC format&lt;/em&gt; &amp;gt; &lt;em&gt;select the type&lt;/em&gt; &amp;gt; &lt;em&gt;comets&lt;/em&gt; &amp;gt; &lt;em&gt;select a source from the list&lt;/em&gt; &amp;gt; &lt;em&gt;MPC’s list of observable comets&lt;/em&gt; and then hit &lt;em&gt;get orbital elements&lt;/em&gt;. Then search for CL 2011 L4 (PANSTARRS). Got that? I’m impressed ;-). In case that was a bit too dense, here’s a video.&lt;/p&gt;
+
+&lt;iframe width=&quot;640&quot; height=&quot;480&quot; src=&quot;http://www.youtube.com/embed/6xKel-7vSxU&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Mon, 11 Mar 2013 00:00:00 -0700</pubDate>
+        <link>http://astrobiased.com/2013/03/11/legacy09/</link>
+        <guid isPermaLink="true">http://astrobiased.com/2013/03/11/legacy09/</guid>
+      </item>
+    
+      <item>
+        <title>D3.js and Coffeescript for scientists</title>
+        <description>&lt;p&gt;Last week I talked about &lt;a href=&quot;http://astrobiased.com/Coffeescript-for-scientists.html&quot;&gt;Coffeescript for scientists&lt;/a&gt;. Now we’re gonna get our hands dirty with D3.js to start our path on making visually stunning plots for the web. To follow this post you should have a setup similar to the one described in the &lt;em&gt;Writing and debugging&lt;/em&gt; section of the previous post on &lt;a href=&quot;http://coffeescript.org/&quot;&gt;Coffescript&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-d3js-is-and-is-not&quot;&gt;What D3.js is and is not&lt;/h3&gt;
+&lt;p&gt;Before moving on, we should have a clear understanding of what D3.js &lt;em&gt;is&lt;/em&gt; and &lt;em&gt;is not&lt;/em&gt;. On the D3.js &lt;a href=&quot;http://d3js.org/&quot;&gt;homepage&lt;/a&gt;, the main motto is “Data Driven Documents”. Think of an HTML page as a blank document and we can do anything we want with it, provided that we have the right tools. D3.js is the tool that allows us to bind arbitrary data to the document and apply data-driven operations, such as creating tables to rich, dynamic, and interactive visualizations. Hence, it’s not just a plotting package, but much more.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-beginning&quot;&gt;The beginning&lt;/h3&gt;
+&lt;p&gt;Scientists are used to making static plots for journal publications, so we’ll begin with static outputs. In the next tutorial we’ll move into dynamic features. Continuing from the previous Coffeescript post, we revisit the polygon code with a small modification that includes a &lt;code&gt;radius&lt;/code&gt; parameter (for circle objects). You can follow these examples with the code I have created for this post &lt;a href=&quot;https://github.com/ebressert/coffee4scientists&quot;&gt;here&lt;/a&gt;. This includes the HTML, Coffeescript, and javascscipt output to make the visuals shown below.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-coffeescript&quot; data-lang=&quot;coffeescript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Defining a function&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;polygon = &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;(sides, size, radius, center) -&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;# Setting up angles to get polygon vertices&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt;     &lt;span class=&quot;nv&quot;&gt;circle = &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PI&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt;     &lt;span class=&quot;nv&quot;&gt;angle = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;circle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sides&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt;     &lt;span class=&quot;nv&quot;&gt;points = &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;# With the polygon defined we iterate through&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;# the sides to get the nth polygon we want.&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sides&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;         &lt;span class=&quot;nv&quot;&gt;x = &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;angle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;         &lt;span class=&quot;nv&quot;&gt;y = &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;angle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt;         &lt;span class=&quot;nx&quot;&gt;points&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;x&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;y&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;points&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To initiate the environment for D3.js we now include the following code with the polygon function.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-coffeescript&quot; data-lang=&quot;coffeescript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Creating data from our function, which is a sexagon&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# centered at (250, 250).&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;polyData = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;polygon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;250&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;250&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Creating the d3.js object that will be called in a div class&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# called &amp;quot;experimental&amp;quot;.&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;svg = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#experimental&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;svg&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;width&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;height&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Here we setup the object for circles along with the style&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Tip, think CSS.&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;circles = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;svg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;circle&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;polyData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;enter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;17&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;circle&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;18&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;gray&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;19&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stroke&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;20&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stroke-width&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;21&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;22&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# We passed polyData to &amp;#39;.data&amp;#39; above. In the &amp;#39;circles&amp;#39; object&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;23&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# data is stored as &amp;#39;d&amp;#39;. Below we create functions that&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;24&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# iteratively return the polyData values.&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;circleAttributes = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;circles&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;26&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cx&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;27&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;cy&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;28&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s the output in D3.js form.&lt;/p&gt;
+
+&lt;div id=&quot;experimental-circles-only&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;This illustrates in terms of simple circles where the vertices of the polygon are located. What if we want to see the actual polygon itself? We can select the &lt;code&gt;polygon&lt;/code&gt; option and then use the same &lt;code&gt;polyData&lt;/code&gt; object.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-coffeescript&quot; data-lang=&quot;coffeescript&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Similar to the circles object.&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;polygons = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;svg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;polygon&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;polyData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;enter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;polygon&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stroke&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;gray&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;stroke-width&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fill&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;none&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# This is setup such that we can add multiple polygons.&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;polygonAttributes = &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;polygons&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;points&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;(d) -&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here we combine the circles with the polygon object, which are layered over one another.&lt;/p&gt;
+
+&lt;div id=&quot;experimental-circles-polygon&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;With some of the basics we can play around with the polygon function to create some strange looking polygons. Here’s an example.&lt;/p&gt;
+
+&lt;div id=&quot;experimental-poly-gone-crazy&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;So far we have learned some basic operations on how to make static objects with D3.js and Coffeescript. If you look at js code that’s created from Coffeescript, you will see that Coffeescript is much more readable and easier to program in. This helps the scientist/researcher get work done in a short amount of time. Next week we’ll start looking into creating dynamic plots. Believe it or not, much of the code we went over here doesn’t have to changed much for dynamic operations.&lt;/p&gt;
+
+&lt;script src=&quot;http://d3js.org/d3.v3.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+// Generated by CoffeeScript 1.4.0
+(function() {
+  var circleAttributes, circles, polyCrazy, polyData, polyGoneCrazy, polygon, polygonAttributes, polygons, svg1, svg2, svg3;
+
+  polygon = function(sides, size, radius, center) {
+    var angle, circle, i, points, x, y, _i;
+    circle = 2 * Math.PI;
+    angle = circle / sides;
+    points = [];
+    for (i = _i = 0; 0 &lt;= sides ? _i &lt;= sides : _i &gt;= sides; i = 0 &lt;= sides ? ++_i : --_i) {
+      x = (Math.cos(angle * i) * size) + center[0];
+      y = (Math.sin(angle * i) * size) + center[1];
+      points[i] = {
+        &quot;x&quot;: x,
+        &quot;y&quot;: y,
+        &quot;r&quot;: radius
+      };
+    }
+    return points;
+  };
+
+  polyGoneCrazy = function(sides, size, radius, center) {
+    var angle, circle, i, points, random, x, y, _i;
+    circle = 2 * Math.PI;
+    angle = circle / sides;
+    points = [];
+    for (i = _i = 0; 0 &lt;= sides ? _i &lt;= sides : _i &gt;= sides; i = 0 &lt;= sides ? ++_i : --_i) {
+      random = Math.floor(Math.random() * (size + 100));
+      x = (Math.cos(angle * i) * random) + center[0];
+      y = (Math.sin(angle * i) * random) + center[1];
+      points[i] = {
+        &quot;x&quot;: x,
+        &quot;y&quot;: y,
+        &quot;r&quot;: radius
+      };
+    }
+    return points;
+  };
+
+  polyData = polygon(6, 150, 20, [250, 250]);
+
+  polyCrazy = polyGoneCrazy(100, 150, 20, [250, 250]);
+
+  svg1 = d3.select(&quot;#experimental-circles-only&quot;).append(&quot;svg&quot;).attr(&quot;width&quot;, 500).attr(&quot;height&quot;, 500);
+
+  circles = svg1.selectAll(&quot;circle&quot;).data(polyData).enter().append(&quot;circle&quot;).style(&quot;fill&quot;, &quot;gray&quot;).style(&quot;stroke&quot;, &quot;none&quot;).style(&quot;stroke-width&quot;, 2);
+
+  circleAttributes = circles.attr(&quot;cx&quot;, function(d) {
+    return d.x;
+  }).attr(&quot;cy&quot;, function(d) {
+    return d.y;
+  }).attr(&quot;r&quot;, function(d) {
+    return d.r;
+  });
+
+  svg2 = d3.select(&quot;#experimental-circles-polygon&quot;).append(&quot;svg&quot;).attr(&quot;width&quot;, 500).attr(&quot;height&quot;, 500);
+
+  circles = svg2.selectAll(&quot;circle&quot;).data(polyData).enter().append(&quot;circle&quot;).style(&quot;fill&quot;, &quot;gray&quot;).style(&quot;stroke&quot;, &quot;none&quot;).style(&quot;stroke-width&quot;, 1);
+
+  circleAttributes = circles.attr(&quot;cx&quot;, function(d) {
+    return d.x;
+  }).attr(&quot;cy&quot;, function(d) {
+    return d.y;
+  }).attr(&quot;r&quot;, function(d) {
+    return d.r;
+  });
+
+  polygons = svg2.selectAll(&quot;polygon&quot;).data([polyData]).enter().append(&#39;polygon&#39;).style(&quot;stroke&quot;, &quot;gray&quot;).style(&quot;stroke-width&quot;, 10).style(&quot;fill&quot;, &#39;none&#39;);
+
+  polygonAttributes = polygons.attr(&quot;points&quot;, function(d) {
+    return d.map(function(d) {
+      return [d.x, d.y].join(&quot;,&quot;);
+    }).join(&quot; &quot;);
+  });
+
+  svg3 = d3.select(&quot;#experimental-poly-gone-crazy&quot;).append(&quot;svg&quot;).attr(&quot;width&quot;, 500).attr(&quot;height&quot;, 500);
+
+  polygons = svg3.selectAll(&quot;polygon&quot;).data([polyCrazy]).enter().append(&#39;polygon&#39;).style(&quot;stroke&quot;, &quot;gray&quot;).style(&quot;stroke-width&quot;, 1).style(&quot;fill&quot;, &#39;gray&#39;);
+
+  polygonAttributes = polygons.attr(&quot;points&quot;, function(d) {
+    return d.map(function(d) {
+      return [d.x, d.y].join(&quot;,&quot;);
+    }).join(&quot; &quot;);
+  });
+
+}).call(this);
+
+&lt;/script&gt;
+
+</description>
+        <pubDate>Fri, 08 Mar 2013 00:00:00 -0800</pubDate>
+        <link>http://astrobiased.com/2013/03/08/legacy08/</link>
+        <guid isPermaLink="true">http://astrobiased.com/2013/03/08/legacy08/</guid>
+      </item>
+    
+      <item>
         <title>Writing papers with Authorea, batteries included</title>
         <description>&lt;p&gt;In the summer of 2012 I was at the the fourth &lt;a href=&quot;http://dotastronomy.com/&quot;&gt;.Astronomy&lt;/a&gt; meeting in Heidelberg, Germany. It’s a meeting where some of the most exciting and cutting-edge ideas about astronomy and the web are discussed. It’s a bit like &lt;a href=&quot;http://www.ted.com/&quot;&gt;TED&lt;/a&gt;, but more informal where think tanking is done through unconference sessions. In between the crazy schedule, I had time to chat with Alberto Pepe, a post-doc working at Harvard. He had something to show me.&lt;/p&gt;
 
@@ -270,222 +743,6 @@ historical posts putting them up (if they work).&lt;/p&gt;
         <pubDate>Wed, 20 Feb 2013 00:00:00 -0800</pubDate>
         <link>http://astrobiased.com/2013/02/20/legacy04/</link>
         <guid isPermaLink="true">http://astrobiased.com/2013/02/20/legacy04/</guid>
-      </item>
-    
-      <item>
-        <title>Visualizing 3D data in yt</title>
-        <description>&lt;p&gt;In astronomy observational data comes in many flavors. Ranging from X-ray to radio wavelengths, data can be captured in either 2D images or higher dimension data cubes. For the Chandra X-ray telescope, the data can be observed in 4D space: x, y, energy, and time. For radio data you can get velocity x, y, and velocity (line-of-sight). In fact, that is just scratching the surface. There’s a lot more information that can be gleaned from these datasets, but for now we will stick with that.&lt;/p&gt;
-
-&lt;p&gt;Visualizing data that has more than two dimensions is not easy, since it requires complex programming and is computationally taxing. In the medical field scientists and doctors visualize data on their patients in 3D frequently, e.g., MRI scans. A cool example is the &lt;a href=&quot;https://github.com/xtk/X#readme&quot;&gt;X Toolkit&lt;/a&gt; project, which is WebGL based. For astronomy, there are many packages that allow us to peruse 3D data such as &lt;a href=&quot;http://hea-www.harvard.edu/RD/ds9/site/Home.html&quot;&gt;DS9&lt;/a&gt;, &lt;a href=&quot;http://casa.nrao.edu/&quot;&gt;CASA&lt;/a&gt;, or &lt;a href=&quot;http://astromed.iic.harvard.edu/&quot;&gt;AstroMed&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Recenly, another program has been making a splash in 3D visualization field: &lt;a href=&quot;http://yt-project.org/&quot;&gt;yt&lt;/a&gt;. It generates amazing renderings of numerical simulations in +3D space and it’s Python based. Here’s some eye candy to see what it is capable of.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://bytebucket.org/yt_analysis/yt/wiki/images/Reion512_600px.png&quot; alt=&quot;reion&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://bytebucket.org/yt_analysis/yt/wiki/images/firey_universe.png&quot; alt=&quot;firey_universe&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I have kept an eye on yt for a while, but never used it as I’m looking for ways to visualize &lt;strong&gt;observational&lt;/strong&gt; data. After a quick chat with &lt;a href=&quot;https://sites.google.com/site/matthewturk/&quot;&gt;Matthew Turk&lt;/a&gt;, the creator of yt, I realized that porting observational data cubes to yt is &lt;em&gt;very&lt;/em&gt; easy. In yt there is a function called &lt;code&gt;load_uniform_grid&lt;/code&gt;. Here’s a quick example of how to load a &lt;a href=&quot;http://en.wikipedia.org/wiki/FITS&quot;&gt;FITS&lt;/a&gt; data cube into yt’s data structure.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;yt.frontends.stream.api&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_uniform_grid&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;astropy.io&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fits&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Loading fits data&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getdata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;some_data_cube.fits&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Porting the data cube structure to yt&amp;#39;s data structure&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Density&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;9&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_uniform_grid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;9e16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;From there you can start visualizing your data in data slices, volume rendering and much more. Here’s a project rendering example of data (position, position, velocity map) on the nearby star-forming cloud, Perseus, from the &lt;a href=&quot;http://www.cfa.harvard.edu/COMPLETE/&quot;&gt;COMPLETE&lt;/a&gt; survey.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;yt.imods&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OffAxisProjectionPlot&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# The vector normal to the slicing plane&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# The command to generate the off axis projection plot&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OffAxisProjectionPlot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;Density&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Applying a grey colormap to all data&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_cmap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;all&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Greys&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Saving the image&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/yt_complete.png&quot; alt=&quot;yt_complete&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The output here is less fancy than the two previous images and that’s because there are many options to tweak in yt to make it look better. Matthew Turk, tried a quick run on this and came up with a nice 3D volume rendering. Here’s the code and image output.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;yt.mods&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;yt.frontends.stream.api&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_uniform_grid&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;astropy.io&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fits&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;aplpy.image_util&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;percentile_function&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Loading fits data&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getdata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;PerA_12coFCRAO_F_vxy.fits&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Masking out nan elements&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isnan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nanmin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Loading data into yt structure&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Density&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_uniform_grid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cube&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;9e16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nprocs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt;17&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Custom min and max to show using function in APLpy.&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;18&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Haven&amp;#39;t used APLpy yet? Check it out at aplpy.github.com.&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;19&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;auto_v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;percentile_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Density&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;auto_v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;auto_v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;99.95&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;21&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt;22&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Setting up parameters for volume rendering. See the following&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;23&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# link for more details on the parameters:&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;24&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# http://yt-project.org/doc/cookbook/simple_plots.html#cookbook-simple-volume-rendering&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ColorTransferFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;26&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_layers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;27&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;28&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;29&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;W&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Nvec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;512&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;31&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cam&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;camera&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Nvec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;32&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;snapshot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;_volume_rendered.png&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;8.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/yt_volume.png&quot; alt=&quot;yt_volume&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you want to see what other possibilities there are, then check out &lt;a href=&quot;http://yt-project.org/doc/index.html&quot;&gt;yt’s documentation&lt;/a&gt;. The cool thing about yt is that it now accepts any type of 3D data cube, including the observational astronomy data. But it has become something more. It has become a tool that can be used for &lt;strong&gt;many&lt;/strong&gt; more 3D visualization purposes.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 17 Feb 2013 00:00:00 -0800</pubDate>
-        <link>http://astrobiased.com/2013/02/17/legacy03/</link>
-        <guid isPermaLink="true">http://astrobiased.com/2013/02/17/legacy03/</guid>
-      </item>
-    
-      <item>
-        <title>Simple ways of speeding up Python code</title>
-        <description>&lt;p&gt;Python shines as an easy-to-learn language since the syntax is readable and getting things done is straightforward. You don’t have to worry about the heavy baggage that comes along with Java, C and similar compiled languages. But, there are downsides as well and the primary one is &lt;em&gt;speed&lt;/em&gt;. Even with help from packages like NumPy, there may be a bottleneck. Here, I’ll go over a few simple tips to speeding up your code.&lt;/p&gt;
-
-&lt;h2 id=&quot;loops&quot;&gt;Loops&lt;/h2&gt;
-&lt;p&gt;One of the most common bottlenecks in Python’s speed are loops and there getting around loops will be impossible at times. Let’s go over a few examples of loops and how to speed them up.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# A standard loop
-storage = []
-for i in range(10000000):
-    storage.append(i * i)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The loop iterates from 0 to 9999999 and appends the output to &lt;code&gt;storage&lt;/code&gt;. If you’re not planning to (or cannot) use NumPy for this case then you would use &lt;code&gt;xrange&lt;/code&gt; instead of &lt;code&gt;range&lt;/code&gt;. The &lt;code&gt;range&lt;/code&gt; function creates a list, so it can be memory intensive with a large number of elements. The &lt;code&gt;xrange&lt;/code&gt; function is a number generator and only creates the numbers needed on the fly, which makes it much less memory intensive. This can naturally speed up loops when a large number of loops will be used.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# A standard loop
-storage = []
-for i in xrange(10000000):
-    storage.append(i * i)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The time difference between these two operations is not big, but if you have multiple loops the time savings adds up. Using the &lt;code&gt;%timeit&lt;/code&gt; command in IPython, I get 1.58 s for the &lt;code&gt;range&lt;/code&gt; example and 1.35 s for for the &lt;code&gt;xrange&lt;/code&gt; example. If you are planning to use NumPy (which is recommended) then the fastest speed up is the following.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;import numpy as np
-arr = np.arange(10000000) * np.arange(10000000)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;IPython’s &lt;code&gt;%timeit&lt;/code&gt; result for this operation is 79 ms. NumPy is the obvious winner. If the program you’re coding cannot use NumPy then using &lt;code&gt;xrange&lt;/code&gt; is the next best option.&lt;/p&gt;
-
-&lt;h2 id=&quot;indexing-with-boolean-arguments&quot;&gt;Indexing with boolean arguments&lt;/h2&gt;
-&lt;p&gt;When I review other people’s code the biggest component that slows them down is how the arrays are modified. Imagine that you have an &lt;em&gt;N&lt;/em&gt; dimension array where you have random values that range between 0 and 1 for each element. If an element is less than 0.5 then you want that element to be set to 0. For loop fans, this would be the obvious solution.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;import numpy as np
-arr = np.random.rand(100000)
-
-def filter(arr):
-    for i, val in enumerate(arr):
-        if val &amp;lt; 0.5:
-            arr[i] = 0
-    return arr
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The time it takes for this operation is 840 ms. With NumPy we are supposed to discard of loops when we can, so if you do the following then you will save a lot of execution time.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;import numpy as np
-arr = np.random.rand(1000000)
-arr[arr &amp;lt; 0.5] = 0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This method takes only 10.4 ms, which is a factor of 80 times faster than the the previous example. The example above is very simple in terms of boolean arguments, so what can we do when it becomes more complicated?&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;import numpy as np
-arr = np.random.rand(1000000)
-index1 = arr &amp;lt; 0.8
-index2 = arr &amp;gt; 0.2
-index3 = arr == 0.9
-arr[~((index1 &amp;amp; index2) | index3)] = -1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We filtered the array for values in between 0.2 and 0.8, with the exception of any element that has a value of 0.9. Any other number is set to -1. With NumPy arrays we can use the &lt;code&gt;&amp;amp;&lt;/code&gt; symbol as the &lt;strong&gt;and&lt;/strong&gt; operator and the &lt;code&gt;|&lt;/code&gt; symbol as the &lt;strong&gt;or&lt;/strong&gt; operator. The tilde (&lt;code&gt;~&lt;/code&gt;) symbol acts as the &lt;strong&gt;not&lt;/strong&gt; operator. You can alternatively just return a new array without the elements that do not meet our criteria.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;arr2 = arr[(index1 &amp;amp; index2) | index3]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This type of slicing and indexing to modify arrays can work on whatever array structure you can come up with, whether it’s 1-D, 3-D, or higher.&lt;/p&gt;
-
-&lt;p&gt;As a quick side note: Using the &lt;code&gt;np.where&lt;/code&gt; function is another way of doing the examples above, but in most cases it will be a bit slower.&lt;/p&gt;
-
-&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-&lt;p&gt;If you apply the methods we covered above in your code you will get a significant speed up. Not all the problems you will run into are going to be plug-and-play, so you will have to be creative at times.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 07 Feb 2013 00:00:00 -0800</pubDate>
-        <link>http://astrobiased.com/2013/02/07/legacy02/</link>
-        <guid isPermaLink="true">http://astrobiased.com/2013/02/07/legacy02/</guid>
-      </item>
-    
-      <item>
-        <title>Python for data analysis on OSX</title>
-        <description>&lt;p&gt;Arranging a good Python setup on OSX for data analysis can be tough due to packages like NumPy, SciPy, and Matplotlib. After trial and error from personal experiences and teaching at workshops, I have found an easy setup that just works. This may not be the best setup for everyone, but for data analysts this is it.&lt;/p&gt;
-
-&lt;p&gt;For reference, this article was inspired by &lt;a href=&quot;http://jakevdp.github.com/blog/2013/02/02/setting-up-a-mac-for-python-development/&quot;&gt;Jake Vanderplas’s blog&lt;/a&gt; where he talked about setting up a Mac for Python development. The article is a great read with a healthy discussion in the comment section.&lt;/p&gt;
-
-&lt;h2 id=&quot;breakdown&quot;&gt;Breakdown&lt;/h2&gt;
-&lt;p&gt;The Python setup is broken into three components.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Macports&lt;/li&gt;
-  &lt;li&gt;Virtualenv&lt;/li&gt;
-  &lt;li&gt;Pip&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Macports will be used to install the complex binary Python packages (especially SciPy). Then we’ll use virtualenv to create a friendly environment for installing other Python packages through pip.&lt;/p&gt;
-
-&lt;h3 id=&quot;macports&quot;&gt;Macports&lt;/h3&gt;
-&lt;p&gt;On OSX you can easily install NumPy, SciPy, and Matplotlib through Macports. First install Macports by following these &lt;a href=&quot;http://www.macports.org/install.php&quot;&gt;instructions&lt;/a&gt;. You will need &lt;a href=&quot;https://developer.apple.com/xcode/&quot;&gt;Xcode&lt;/a&gt; and &lt;code&gt;command line tools&lt;/code&gt; installed for Macports since there will a fair amount of code compiling. Once you have Macports installed you should do the following.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo port selfupdate
-sudo port install py27-numpy py27-scipy py27-matplotlib
-          py27-virtualenv
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This will take roughly an hour, so grab some coffee. I’m including virtualenv in the &lt;code&gt;port&lt;/code&gt; install to make sure that the virtualenv setup does not confused in the later steps.&lt;/p&gt;
-
-&lt;h3 id=&quot;virtualenv-and-pip&quot;&gt;Virtualenv and pip&lt;/h3&gt;
-&lt;p&gt;After Macports has done its job you should use &lt;code&gt;virtualenv&lt;/code&gt; to setup a friendly environment for installing additional packages.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;virtualenv-2.7 local --system-site-packages
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The &lt;code&gt;--system-site-packages&lt;/code&gt; option makes the &lt;code&gt;local&lt;/code&gt; environment aware of the NumPy, SciPy, and Matplotlib packages that have been installed with &lt;code&gt;Macports&lt;/code&gt;. For the next step you will want to activate the &lt;code&gt;virtualenv&lt;/code&gt; environment. You can do this temporarily or permanently for whenever you launch your favorite terminal application. For the temporary activation should execute &lt;code&gt;source ~/local/bin/activate&lt;/code&gt; in your terminal.&lt;/p&gt;
-
-&lt;p&gt;If you want the virtualenv environment present whenever you open a new terminal then place the &lt;code&gt;source&lt;/code&gt; command in you .bashrc, .bash_profile, or .profile file. Assuming that you named the virtualenv folder “local”, you should see &lt;code&gt;(local)&lt;/code&gt; in your new terminal windows. To install a Python package through pip you simply do the following.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;pip install somepackagename
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You’re all set from here. You should be able to install most packages without issues. If you download a package and you want to install it locally you can do&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;pip install somepackagename/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and pip will recognize from the slash character that you mean a local install. This is particularly useful when you’re downloading packages from Github. If you run into a package that is tough to install due to dependencies it may be a good idea to see if it is available in Macports.&lt;/p&gt;
-
-&lt;p&gt;There is another fantastic package manager called &lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;Homebrew&lt;/a&gt;. It’s not mentioned here as I don’t use it, but if you’re curious go take a look. Just bear in mind that getting packages like SciPy can be trickier with Homebrew. If you’re interested in this route - take a look at &lt;a href=&quot;http://penandpants.com/2012/02/24/install-python/&quot;&gt;Matt Davis’s blog&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 05 Feb 2013 00:00:00 -0800</pubDate>
-        <link>http://astrobiased.com/2013/02/05/legacy01/</link>
-        <guid isPermaLink="true">http://astrobiased.com/2013/02/05/legacy01/</guid>
       </item>
     
   </channel>
