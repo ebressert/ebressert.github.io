@@ -11,3 +11,6 @@ google_analytics: "UA-37562516-1"
 markdown: kramdown
 permalink: pretty
 paginate: 5
+
+# Plugins
+# markdown: redcarpet

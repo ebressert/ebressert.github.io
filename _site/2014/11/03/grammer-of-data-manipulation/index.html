@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Grammar of Data Manipulation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Connecting the impossible">
+    <meta name="author" content="Eli Bressert">
+    <link rel="canonical" href="http://astrobiased.com/2014/11/03/grammer-of-data-manipulation/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/basscss.css" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css" type="text/css">
+    <link rel="stylesheet" href="/css/solarized-dark.css" type="text/css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://astrobiased.com">Astrobiased</a>
+      <nav class="site-nav right">
+        <a href="/about">About</a>
+<a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="post-header mb2">
+  <h1 class="py2">Grammar of Data Manipulation</h1>
+  <span class="post-meta">Nov 3, 2014</span>
+</div>
+
+<article class="post-content">
+  <p>R and Python are two widely used languages for data analysis. R has been around for some time, has a healthy set of libraries for statistical analysis and predictions, and the packages have had time to evolve and become more polished. Whereas Python came into the spotlight for analytical purposes in the last decade thanks to NumPy, SciPy, Scikit-Learn, and recently - Pandas. Taking what R has learned, Pandas replicated the DataFrame structure in to Python and has made the operation of working with tabular data much easier.</p>
+
+<p>What <strong>was</strong> lacking in both R and Python was the capability of manipulating data in a consistent and functional form. Similar to <a href="http://www.springer.com/statistics/computational+statistics/book/978-0-387-24544-7"><em>Grammar of Graphics</em></a>, which is employed nicely in ggplot2, a package called <a href="http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html">dplyr</a> was developed to employ a similar grammar system. At its purest form, dplyr treats data manipulation as follows,</p>
+
+<script type="math/tex; mode=display"> verb(\text{DataFrame}, operator) </script>
+
+<p>where the verbs are</p>
+
+<ul>
+  <li>filter()</li>
+  <li>slice())</li>
+  <li>arrange()</li>
+  <li>select()</li>
+  <li>rename()</li>
+  <li>distinct()</li>
+  <li>mutate()</li>
+  <li>transmute()</li>
+  <li>summarise()</li>
+  <li>sample_n()</li>
+  <li>sample_frac()</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="lineno"> 1</span> <span class="kn">library</span><span class="p">(</span>nycflights13<span class="p">)</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="kp">head</span><span class="p">(</span>flights<span class="p">)</span>
+<span class="lineno"> 4</span> <span class="c1">#&gt; Source: local data frame [6 x 16]</span>
+<span class="lineno"> 5</span> <span class="c1">#&gt;    year month day dep_time dep_delay arr_time arr_delay carrier tailnum</span>
+<span class="lineno"> 6</span> <span class="c1">#&gt; 1  2013     1   1      517         2      830        11      UA  N14228</span>
+<span class="lineno"> 7</span> <span class="c1">#&gt; 2  2013     1   1      533         4      850        20      UA  N24211</span>
+<span class="lineno"> 8</span> <span class="c1">#&gt; 3  2013     1   1      542         2      923        33      AA  N619AA</span>
+<span class="lineno"> 9</span> <span class="c1">#&gt; 4  2013     1   1      544        -1     1004       -18      B6  N804JB</span>
+<span class="lineno">10</span> <span class="c1">#&gt; ..  ...   ... ...      ...       ...      ...       ...     ...     ...</span>
+<span class="lineno">11</span> <span class="c1">#&gt; Variables not shown: flight (int), origin (chr), dest (chr), air_time</span>
+<span class="lineno">12</span> <span class="c1">#&gt;   (dbl), distance (dbl), hour (dbl), minute (dbl)</span>
+<span class="lineno">13</span> 
+<span class="lineno">14</span> 
+<span class="lineno">15</span> filter<span class="p">(</span>flights<span class="p">,</span> month <span class="o">==</span> <span class="m">1</span><span class="p">,</span> day <span class="o">==</span> <span class="m">1</span><span class="p">)</span>
+<span class="lineno">16</span> <span class="c1">#&gt; Source: local data frame [842 x 16]</span>
+<span class="lineno">17</span> <span class="c1">#&gt;</span>
+<span class="lineno">18</span> <span class="c1">#&gt;    year month day dep_time dep_delay arr_time arr_delay carrier tailnum</span>
+<span class="lineno">19</span> <span class="c1">#&gt; 1  2013     1   1      517         2      830        11      UA  N14228</span>
+<span class="lineno">20</span> <span class="c1">#&gt; 2  2013     1   1      533         4      850        20      UA  N24211</span>
+<span class="lineno">21</span> <span class="c1">#&gt; 3  2013     1   1      542         2      923        33      AA  N619AA</span>
+<span class="lineno">22</span> <span class="c1">#&gt; 4  2013     1   1      544        -1     1004       -18      B6  N804JB</span>
+<span class="lineno">23</span> <span class="c1">#&gt; ..  ...   ... ...      ...       ...      ...       ...     ...     ...</span>
+<span class="lineno">24</span> <span class="c1">#&gt; Variables not shown: flight (int), origin (chr), dest (chr), air_time</span>
+<span class="lineno">25</span> <span class="c1">#&gt;   (dbl), distance (dbl), hour (dbl), minute (dbl)</span></code></pre></div>
+
+
+</article>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="p2 wrap">
+    <div class="measure mt1 center">
+      <small>
+        Crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+        &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll.git">Github</a>.
+      </small>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-37562516-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>
