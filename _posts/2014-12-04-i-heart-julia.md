@@ -2,7 +2,7 @@
 layout:     post
 title:      I ♥ Julia
 date:       2014-12-04
-summary:    summary
+summary:    For the past half year I've been exploring Julia in piecemeal fashion. It's a language that does not conform to the traditional notions of programming. Julia is a high-level, dynamic language and is on par with C and Fortran in performance.
 ---
 
 For the past half year I've been exploring [Julia](http://julialang.org/) in piecemeal fashion. It's a language that does not conform to the traditional notions of programming. Julia is a high-level, dynamic language (like Python) and is on par with C and Fortran in performance.
