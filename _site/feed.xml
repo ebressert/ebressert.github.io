@@ -7,71 +7,163 @@
     <atom:link href="http://astrobiased.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Grammar of Data Manipulation</title>
-        <description>&lt;p&gt;R and Python are two widely used languages for data analysis. R has been around for some time, has a healthy set of libraries for statistical analysis and predictions, and the packages have had time to evolve and become more polished. Whereas Python came into the spotlight for analytical purposes in the last decade thanks to NumPy, SciPy, Scikit-Learn, and recently - Pandas. Taking what R has learned, Pandas replicated the DataFrame structure in to Python and has made the operation of working with tabular data much easier.&lt;/p&gt;
+        <title>Exploratory Data Analysis &amp; Graphics</title>
+        <description>&lt;p&gt;In data science, or any related quantitative field, we strive to understand and leverage our data for our objectives. These data will usually be part of a bigger project that we’re working on where the workflow looks something like the following:&lt;/p&gt;
 
-&lt;p&gt;What &lt;strong&gt;was&lt;/strong&gt; lacking in both R and Python was the capability of manipulating data in a consistent and functional form. Similar to &lt;a href=&quot;http://www.springer.com/statistics/computational+statistics/book/978-0-387-24544-7&quot;&gt;&lt;em&gt;Grammar of Graphics&lt;/em&gt;&lt;/a&gt;, which is employed nicely in ggplot2, a package called &lt;a href=&quot;http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html&quot;&gt;dplyr&lt;/a&gt; was developed to employ a similar grammar system. At its purest form, dplyr treats data manipulation as follows,&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Obtain data&lt;/li&gt;
+  &lt;li&gt;Explore data&lt;/li&gt;
+  &lt;li&gt;Research/create data product&lt;/li&gt;
+  &lt;li&gt;Fine tune project and release&lt;/li&gt;
+  &lt;li&gt;Rinse and repeat&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt; verb(\text{DataFrame}, operator) &lt;/script&gt;
+&lt;p&gt;Each step is critical and sequential where the assumptions and decisions made early on will affect the subsequent steps, for better or worse. Data collection is the most important step, where the metrics and methods determine what can be done with it. In each sub-field of quantitative analysis, be it academic sciences or industry, the data collection processes can vary drastically. Conversely, the exploratory data analysis phase is universal and can be broken down to several basic components: basic statistics, graphics, hypotheses formulation, and assessment of the best models/approaches to use for objectives.&lt;/p&gt;
 
-&lt;p&gt;where the verbs are&lt;/p&gt;
+&lt;p&gt;Before moving on there is one caveat: &lt;em&gt;Never trust data&lt;/em&gt; at face value. Always be skeptical and keep an eye out for any suspicious anomalies throughout. Furthermore, ensure that your understanding of the data is correct. For example, you may see data labeled as “Date” with values like “2015-01-04” and later find out that it is in GMT and not your local time zone. You can fit a model to bad or misconceived data, which means that no matter how well your predictions perform, they will be incorrect. Even if the model is right in some cases, it will be right for the wrong reasons.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;filter()&lt;/li&gt;
-  &lt;li&gt;slice())&lt;/li&gt;
-  &lt;li&gt;arrange()&lt;/li&gt;
-  &lt;li&gt;select()&lt;/li&gt;
-  &lt;li&gt;rename()&lt;/li&gt;
-  &lt;li&gt;distinct()&lt;/li&gt;
-  &lt;li&gt;mutate()&lt;/li&gt;
-  &lt;li&gt;transmute()&lt;/li&gt;
-  &lt;li&gt;summarise()&lt;/li&gt;
-  &lt;li&gt;sample_n()&lt;/li&gt;
-  &lt;li&gt;sample_frac()&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id=&quot;anscombes-quartet-the-power-of-graphics&quot;&gt;Anscombe’s Quartet: The power of graphics&lt;/h2&gt;
+&lt;p&gt;Some data properties that would be obvious when visualized can be overlooked with basic statistics. A classic example of this is Anscombe’s Quartet. This data set comprises of four different groups (I, II, III, and IV) with X and Y features.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;nycflights13&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;flights&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt; Source: local data frame [6 x 16]&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt;    year month day dep_time dep_delay arr_time arr_delay carrier tailnum&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt; 1  2013     1   1      517         2      830        11      UA  N14228&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt; 2  2013     1   1      533         4      850        20      UA  N24211&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt; 3  2013     1   1      542         2      923        33      AA  N619AA&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt; 4  2013     1   1      544        -1     1004       -18      B6  N804JB&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt; ..  ...   ... ...      ...       ...      ...       ...     ...     ...&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt; Variables not shown: flight (int), origin (chr), dest (chr), air_time&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt;   (dbl), distance (dbl), hour (dbl), minute (dbl)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt; 
-&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt; filter&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;flights&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; month &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; day &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt; Source: local data frame [842 x 16]&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;17&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;18&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt;    year month day dep_time dep_delay arr_time arr_delay carrier tailnum&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;19&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt; 1  2013     1   1      517         2      830        11      UA  N14228&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt; 2  2013     1   1      533         4      850        20      UA  N24211&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;21&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt; 3  2013     1   1      542         2      923        33      AA  N619AA&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;22&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt; 4  2013     1   1      544        -1     1004       -18      B6  N804JB&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;23&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt; ..  ...   ... ...      ...       ...      ...       ...     ...     ...&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;24&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt; Variables not shown: flight (int), origin (chr), dest (chr), air_time&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#&amp;gt;   (dbl), distance (dbl), hour (dbl), minute (dbl)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/anscombes_quartet_table.png&quot; alt=&quot;Anscombe&#39;s quartet table&quot; /&gt;&lt;/p&gt;
 
+&lt;p&gt;Despite the obvious differences between the four groups, summary statistics and even linear fits to the data are identical to the second or third decimal place. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Group I, Group II, Group III, and Group IV&lt;/strong&gt;&lt;br /&gt;
+Mean x: 9.0&lt;br /&gt;
+Mean y: 7.5&lt;br /&gt;
+Variance x: 11.00&lt;br /&gt;
+Variance y: 4.13&lt;br /&gt;
+Correlation between x and y: 0.816&lt;br /&gt;
+Linear regression coefficients: \( Y = 3.00 + 0.50\,X \) &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;footnote1-return&quot;&gt;&lt;/a&gt;The graphic&lt;sup&gt;&lt;a href=&quot;#footnote1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; below highlight the differences clearly. If we had not visualized the data we could have assumed that the groups were the same.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/anscombes_quartet_graphic.png&quot; alt=&quot;Anscombe&#39;s Quartet&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Imagine that each group had one million rows. Checking the data manually at this volume wouldn’t be effective. Visualizing the data with simple graphics to show the right context is key in this process. The code used to generate the stats and graphics can be found &lt;a href=&quot;https://gist.github.com/ebressert/f7a969339ccec94138d4&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Anscombe’s Quartet would be unlikely to occur in the data we work with, but it could be close. Close enough that one may conclude that the differences or similarities are small and make assumptions that can impact a project negatively. &lt;/p&gt;
+
+&lt;h2 id=&quot;show-me-the-data&quot;&gt;Show me the data&lt;/h2&gt;
+&lt;p&gt;A simple graphic is analogous to a simple sentence: Concise and to the point. A complex graphic is like a run-on sentence where the message can be lost amongst the audience. Hence, it’s important to keep your graphics simple. When you do this, you are better informed and can quickly work through the data exploration. &lt;/p&gt;
+
+&lt;p&gt;At Stitch Fix, we interview a lot of candidates and love giving them problems that make them think. For example, we give them a dataset that has generic labels, which is either generated or anonymized. In the data there are nuanced statistics that the candidate can find, or better yet show us something that we didn’t see before. The data challenges have no wrong or right answer. We want to see what the candidate can do and how they would approach a problem where there’s no obvious solution. &lt;/p&gt;
+
+&lt;p&gt;As a sanity check, we’ll  do the data challenge ourselves to make sure that what we’re asking the candidates to do is feasible. In one test I looked at a tabular dataset we’ve given out before and came up with the following graphics to get an overview of the data. We refer to the columns in the data as features. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/hists.png&quot; alt=&quot;Histograms of features&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From the graphic above  I can quickly assess which columns in the table are binary, categorical, or continuous. I can also identify distributions, which influences the kind of assumptions we can make for later stages of analysis.&lt;/p&gt;
+
+&lt;p&gt;Viewing pairwise correlations between the features can be cumbersome when there’s a lot of them. The correlation matrix is a wonderful way to visualize the pairwise correlations into a dense yet readable form. The most strongly correlated features are in blue and the inversely correlated are in red. Values that show no correlation are white. This matrix tells us about the relationships between the features in the data.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/correlation_matrix.png&quot; alt=&quot;Correlation matrix&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To find the subset of features that explain the bulk of the variation in the data, I use principal component analysis (PCA). It’s a simple yet powerful tool. Using a scatter plot is the ideal way to visualize a PCA of data projected onto two components. In this case we have a high number of observations, so I place histograms on the top and right side to represent PC1 and PC2 components, respectively, to ensure that I don’t miss any obvious densities. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/pca.png&quot; alt=&quot;Principal component analysis&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At this point, I can make some educated hypotheses about the data and model it to predict certain behaviors. If I were to take the it to the production stage, I can now assess which models should be used and move forward. &lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In a nutshell, graphics are powerful for data exploration and should be combined with basic descriptive statistics. Keep the graphics simple for maximum clarity. Both tools will show us different properties that we’ll need for the more advanced stages of research and product development.&lt;/p&gt;
+
+&lt;p&gt;In the next post we’ll discuss how to optimize the exploratory data analysis stage through sampling.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;sup&gt;†&lt;/sup&gt;
+This post has been cross-posted on &lt;a href=&quot;http://technology.stitchfix.com/blog/index.html&quot;&gt;Stitch Fix&lt;/a&gt; and &lt;a href=&quot;http://www.insightdatascience.com/blog/&quot;&gt;Insight&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&quot;footnote1&quot;&gt;&lt;/a&gt;
+&lt;sup&gt;1&lt;/sup&gt;
+All graphics shown here were made using &lt;a href=&quot;http://web.stanford.edu/~mwaskom/software/seaborn/index.html&quot;&gt;Seaborn&lt;/a&gt;, a statistical graphics package in Python.
+&lt;a href=&quot;#footnote1-return&quot;&gt;←&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Mon, 03 Nov 2014 00:00:00 -0800</pubDate>
-        <link>http://astrobiased.com/2014/11/03/grammer-of-data-manipulation/</link>
-        <guid isPermaLink="true">http://astrobiased.com/2014/11/03/grammer-of-data-manipulation/</guid>
+        <pubDate>Tue, 20 Jan 2015 00:00:00 -0800</pubDate>
+        <link>http://astrobiased.com/2015/01/20/eda-and-graphics/</link>
+        <guid isPermaLink="true">http://astrobiased.com/2015/01/20/eda-and-graphics/</guid>
       </item>
     
       <item>
-        <title>New form factor</title>
-        <description>&lt;p&gt;Astrobiased.com has been upgraded. I’ll be working on retrieving the
-historical posts putting them up (if they work).&lt;/p&gt;
+        <title>I ♥ Julia</title>
+        <description>&lt;p&gt;For the past half year I’ve been exploring &lt;a href=&quot;http://julialang.org/&quot;&gt;Julia&lt;/a&gt; in piecemeal fashion. It’s a language that does not conform to the traditional notions of programming. Julia is a high-level, dynamic language (like Python) and is on par with C and Fortran in performance.&lt;/p&gt;
 
-&lt;p&gt;In the meantime new posts will be coming soon.&lt;/p&gt;
+&lt;p&gt;Imagine the following: You’ve done some data exploration/prototyping in R and/or Python and you’re ready to take the code a level up for heavy lifting. Next step, flesh out the code in some flavor of C or Java for high performance, or modify your Python code to take advantage of PyPy, Numba, or Cython.&lt;/p&gt;
+
+&lt;h2 id=&quot;julia-to-the-rescue&quot;&gt;Julia to the rescue&lt;/h2&gt;
+&lt;p&gt;In Julia’s eyes, the above is redundant. After the prototyping you should be &lt;strong&gt;done&lt;/strong&gt;. Sure, clean up the code, organize it, and mark it up with documentation. Then ship it out. There’s no need to modify the code for specialized tools or switch languages. That’s a big bonus and can save a lot of time for anyone’s workflow.&lt;/p&gt;
+
+&lt;p&gt;Here’s a short list of features that I’m liking.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://julia.readthedocs.org/en/latest/manual/packages/&quot;&gt;Package installation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://julia.readthedocs.org/en/latest/stdlib/profile/&quot;&gt;Profiling&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Write with and without &lt;a href=&quot;http://docs.julialang.org/en/release-0.3/manual/performance-tips/&quot;&gt;types&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Call C functions with &lt;a href=&quot;http://julia.readthedocs.org/en/latest/manual/calling-c-and-fortran-code/&quot;&gt;no wrappers or APIs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Well designed and integrated &lt;a href=&quot;http://julia.readthedocs.org/en/latest/manual/parallel-computing/&quot;&gt;parallelism and distributed computing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Beautifully simple &lt;a href=&quot;http://julia.readthedocs.org/en/latest/manual/dates/&quot;&gt;date and datetime&lt;/a&gt; functionality&lt;/li&gt;
+  &lt;li&gt;Unicode names can be &lt;a href=&quot;http://julia.readthedocs.org/en/latest/manual/variables/&quot;&gt;used&lt;/a&gt; for variables, functions and more&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://julia.readthedocs.org/en/latest/manual/metaprogramming/#macros&quot;&gt;Macros&lt;/a&gt; included&lt;/li&gt;
+  &lt;li&gt;Healthy development, &lt;a href=&quot;http://www.johnmyleswhite.com/notebook/2014/11/29/whats-wrong-with-statistics-in-julia/&quot;&gt;evolving&lt;/a&gt;, and &lt;a href=&quot;http://juliastats.github.io/&quot;&gt;growing&lt;/a&gt; statistics backend&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;examples&quot;&gt;Examples&lt;/h2&gt;
+
+&lt;h3 id=&quot;package-management&quot;&gt;Package management&lt;/h3&gt;
+&lt;p&gt;Julia is similar to R in terms of package management style, but it’s clearly an evolved form. The package manager (Pkg) is by default flexible and modern. The basic functionalities include the following.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;Pkg.installed()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Pkg.status()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Pkg.add(&quot;name_of_package&quot;)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Pkg.rm(&quot;name_of_package&quot;)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Pkg.update()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are two other functions that caught my eye: &lt;code&gt;Pkg.clone(&quot;some_git_repo&quot;)&lt;/code&gt; and &lt;code&gt;Pkg.checkout(&quot;git_master_repo&quot;)&lt;/code&gt;. All Julia packages are git repositories. Clonable and branchable: A recipe for easy package development and testing. If you want to install a branch instead of master in a repo, you can do &lt;code&gt;Pkg.checkout(&quot;name_of_package&quot;, branch=&quot;a_branch&quot;)&lt;/code&gt;. This kind of package management is much better than what is currently available for Python packaging. R has something similar, but you have to install a few requirements to make it work.&lt;/p&gt;
+
+&lt;p&gt;Looking for good Julia packages? He’s a good starting point: &lt;a href=&quot;http://pkg.julialang.org/&quot;&gt;pkg.julialang.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;unicode-naming&quot;&gt;Unicode naming&lt;/h3&gt;
+&lt;p&gt;Taking unicode names like τ and being able to employ it in code can make the mapping of equations to code easier to read. This is nothing new (Javascript can do it as well), but it makes the mapping convenient for math-heavy projects. Here’s an example with the normal distribution equation. Feels a bit like going from F77 to F95.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt; P(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-(x-\mu)^2/(2\sigma^2)} &lt;/script&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-julia&quot; data-lang=&quot;julia&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;  P&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;μ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;σ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;σ&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;π&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;μ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;σ&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 0.1714719275&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Furthermore, when you’re typing in Julia’s REPL or IJulia, you can type the mathematical notations and hit tab to get your special character. For example, if you type in &lt;code&gt;\Sigma&lt;/code&gt; and hit tab you will get Σ. Convenient.&lt;/p&gt;
+
+&lt;h2 id=&quot;afterthoughts&quot;&gt;Afterthoughts&lt;/h2&gt;
+&lt;p&gt;There’s so much more to cover on Julia, but this post is just meant to get the curious more curious. Before jumping on board with Julia, bear in mind that it’s in early days. The language itself performs well, but there’s a lack of libraries in comparison to R and Python. I’d say it’s somewhere between 20% to 30% in library abundance. Should that stop you? It didn’t for me when I adopted Python for astrophysics back in 2006 (astro packages were nearly non-existant then), which turned out to be a great investment.&lt;/p&gt;
+
+&lt;p&gt;Julia is a modern language. It takes the best of language features and implements them nicely, such as comprehension syntax and tuple assignment (Python features), or a great package management system that is an upgrade from R’s capabilities.&lt;/p&gt;
+
+&lt;p&gt;Go give Julia a try on &lt;a href=&quot;https://juliabox.org/&quot;&gt;JuliaBox&lt;/a&gt; where you don’t have to install anything.&lt;/p&gt;
+
+&lt;h2 id=&quot;running-julia-on-osx&quot;&gt;Running Julia on OSX&lt;/h2&gt;
+&lt;p&gt;If you’re planning to install Julia on OSX, here’s what I found to be the easiest way to get started. First make sure you have &lt;a href=&quot;http://caskroom.io/&quot;&gt;Cask&lt;/a&gt; installed and then follow the details below.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; cask install julia&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Open up ~/.zshrc and put in the following (or your bashrc) .&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;/Users/[yourusername]/Applications/Julia-X.X.X.app/Contents/Resources/julia/bin:$PATH&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Change the X.X.X to the version number you have installed. In my case it’s Julia-0.3.3.app.&lt;/p&gt;
+
+&lt;p&gt;The most popular IDE for Julia is &lt;a href=&quot;http://forio.com/labs/julia-studio/&quot;&gt;Julia-Studio&lt;/a&gt;, but it does not work for Julia newer than 2.X. Fortunately, there’s &lt;a href=&quot;https://github.com/JuliaLang/IJulia.jl&quot;&gt;IJulia&lt;/a&gt; which uses the IPython Notebook system to create a nice data analysis environment. Another nice environment is &lt;a href=&quot;http://junolab.org/&quot;&gt;Juno&lt;/a&gt;, which is great for interactions and data exploration. Otherwise you can use VIM, Sublime, or Atom with a Julia REPL to interact with.&lt;/p&gt;
+
+&lt;p&gt;&lt;sub&gt;&lt;sup&gt;Cross-posted on Stitch Fix’s tech &lt;a href=&quot;http://technology.stitchfix.com/blog/index.html&quot;&gt;blog&lt;/a&gt;&lt;/sup&gt;&lt;/sub&gt;&lt;/p&gt;
 </description>
-        <pubDate>Mon, 01 Sep 2014 00:00:00 -0700</pubDate>
-        <link>http://astrobiased.com/2014/09/01/first-post/</link>
-        <guid isPermaLink="true">http://astrobiased.com/2014/09/01/first-post/</guid>
+        <pubDate>Thu, 04 Dec 2014 00:00:00 -0800</pubDate>
+        <link>http://astrobiased.com/2014/12/04/i-heart-julia/</link>
+        <guid isPermaLink="true">http://astrobiased.com/2014/12/04/i-heart-julia/</guid>
       </item>
     
       <item>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exploratory Data Analysis & Graphics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Connecting the impossible">
+    <meta name="author" content="Eli Bressert">
+    <link rel="canonical" href="http://astrobiased.com/2015/01/20/eda-and-graphics/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/basscss.css" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css" type="text/css">
+    <link rel="stylesheet" href="/css/solarized-dark.css" type="text/css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://astrobiased.com">Astrobiased</a>
+      <nav class="site-nav right">
+        <a href="/about">About</a>
+<a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="post-header mb2">
+  <h1 class="py2">Exploratory Data Analysis & Graphics</h1>
+  <span class="post-meta">Jan 20, 2015</span>
+</div>
+
+<article class="post-content">
+  <p>In data science, or any related quantitative field, we strive to understand and leverage our data for our objectives. These data will usually be part of a bigger project that we’re working on where the workflow looks something like the following:</p>
+
+<ol>
+  <li>Obtain data</li>
+  <li>Explore data</li>
+  <li>Research/create data product</li>
+  <li>Fine tune project and release</li>
+  <li>Rinse and repeat</li>
+</ol>
+
+<p>Each step is critical and sequential where the assumptions and decisions made early on will affect the subsequent steps, for better or worse. Data collection is the most important step, where the metrics and methods determine what can be done with it. In each sub-field of quantitative analysis, be it academic sciences or industry, the data collection processes can vary drastically. Conversely, the exploratory data analysis phase is universal and can be broken down to several basic components: basic statistics, graphics, hypotheses formulation, and assessment of the best models/approaches to use for objectives.</p>
+
+<p>Before moving on there is one caveat: <em>Never trust data</em> at face value. Always be skeptical and keep an eye out for any suspicious anomalies throughout. Furthermore, ensure that your understanding of the data is correct. For example, you may see data labeled as “Date” with values like “2015-01-04” and later find out that it is in GMT and not your local time zone. You can fit a model to bad or misconceived data, which means that no matter how well your predictions perform, they will be incorrect. Even if the model is right in some cases, it will be right for the wrong reasons.</p>
+
+<h2 id="anscombes-quartet-the-power-of-graphics">Anscombe’s Quartet: The power of graphics</h2>
+<p>Some data properties that would be obvious when visualized can be overlooked with basic statistics. A classic example of this is Anscombe’s Quartet. This data set comprises of four different groups (I, II, III, and IV) with X and Y features.</p>
+
+<p><img src="/assets/anscombes_quartet_table.png" alt="Anscombe's quartet table" /></p>
+
+<p>Despite the obvious differences between the four groups, summary statistics and even linear fits to the data are identical to the second or third decimal place. </p>
+
+<p><strong>Group I, Group II, Group III, and Group IV</strong><br />
+Mean x: 9.0<br />
+Mean y: 7.5<br />
+Variance x: 11.00<br />
+Variance y: 4.13<br />
+Correlation between x and y: 0.816<br />
+Linear regression coefficients: \( Y = 3.00 + 0.50\,X \) <br /></p>
+
+<p><a name="footnote1-return"></a>The graphic<sup><a href="#footnote1">1</a></sup> below highlight the differences clearly. If we had not visualized the data we could have assumed that the groups were the same.</p>
+
+<p><img src="/assets/anscombes_quartet_graphic.png" alt="Anscombe's Quartet" /></p>
+
+<p>Imagine that each group had one million rows. Checking the data manually at this volume wouldn’t be effective. Visualizing the data with simple graphics to show the right context is key in this process. The code used to generate the stats and graphics can be found <a href="https://gist.github.com/ebressert/f7a969339ccec94138d4">here</a>.</p>
+
+<p>Anscombe’s Quartet would be unlikely to occur in the data we work with, but it could be close. Close enough that one may conclude that the differences or similarities are small and make assumptions that can impact a project negatively. </p>
+
+<h2 id="show-me-the-data">Show me the data</h2>
+<p>A simple graphic is analogous to a simple sentence: Concise and to the point. A complex graphic is like a run-on sentence where the message can be lost amongst the audience. Hence, it’s important to keep your graphics simple. When you do this, you are better informed and can quickly work through the data exploration. </p>
+
+<p>At Stitch Fix, we interview a lot of candidates and love giving them problems that make them think. For example, we give them a dataset that has generic labels, which is either generated or anonymized. In the data there are nuanced statistics that the candidate can find, or better yet show us something that we didn’t see before. The data challenges have no wrong or right answer. We want to see what the candidate can do and how they would approach a problem where there’s no obvious solution. </p>
+
+<p>As a sanity check, we’ll  do the data challenge ourselves to make sure that what we’re asking the candidates to do is feasible. In one test I looked at a tabular dataset we’ve given out before and came up with the following graphics to get an overview of the data. We refer to the columns in the data as features. </p>
+
+<p><img src="/assets/hists.png" alt="Histograms of features" /></p>
+
+<p>From the graphic above  I can quickly assess which columns in the table are binary, categorical, or continuous. I can also identify distributions, which influences the kind of assumptions we can make for later stages of analysis.</p>
+
+<p>Viewing pairwise correlations between the features can be cumbersome when there’s a lot of them. The correlation matrix is a wonderful way to visualize the pairwise correlations into a dense yet readable form. The most strongly correlated features are in blue and the inversely correlated are in red. Values that show no correlation are white. This matrix tells us about the relationships between the features in the data.</p>
+
+<p><img src="/assets/correlation_matrix.png" alt="Correlation matrix" /></p>
+
+<p>To find the subset of features that explain the bulk of the variation in the data, I use principal component analysis (PCA). It’s a simple yet powerful tool. Using a scatter plot is the ideal way to visualize a PCA of data projected onto two components. In this case we have a high number of observations, so I place histograms on the top and right side to represent PC1 and PC2 components, respectively, to ensure that I don’t miss any obvious densities. </p>
+
+<p><img src="/assets/pca.png" alt="Principal component analysis" /></p>
+
+<p>At this point, I can make some educated hypotheses about the data and model it to predict certain behaviors. If I were to take the it to the production stage, I can now assess which models should be used and move forward. </p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>In a nutshell, graphics are powerful for data exploration and should be combined with basic descriptive statistics. Keep the graphics simple for maximum clarity. Both tools will show us different properties that we’ll need for the more advanced stages of research and product development.</p>
+
+<p>In the next post we’ll discuss how to optimize the exploratory data analysis stage through sampling.</p>
+
+<hr />
+<p><sup>†</sup>
+This post has been cross-posted on <a href="http://technology.stitchfix.com/blog/index.html">Stitch Fix</a> and <a href="http://www.insightdatascience.com/blog/">Insight</a>.</p>
+
+<p><a name="footnote1"></a>
+<sup>1</sup>
+All graphics shown here were made using <a href="http://web.stanford.edu/~mwaskom/software/seaborn/index.html">Seaborn</a>, a statistical graphics package in Python.
+<a href="#footnote1-return">←</a></p>
+
+</article>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="p2 wrap">
+    <div class="measure mt1 center">
+      <small>
+        Crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+        &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll.git">Github</a>.
+      </small>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-37562516-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>
