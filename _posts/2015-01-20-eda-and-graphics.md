@@ -1,5 +1,5 @@
 ---
-title:      Exploratory Data Analysis & Graphics 
+title:      Show Me the Data: Using Graphics for Exploratory Data Analysis
 layout:     post
 date:       2015-01-20
 summary:    The essnential ingredient to any data science project is exploratory data analysis. It is comprised of the following operations to better understand new data - basic stats, graphics, hypotheses formulation and assessment of the best models/models to use. Here we discuss the importance of graphics while exploring data.   
