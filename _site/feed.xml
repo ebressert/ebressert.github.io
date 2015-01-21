@@ -7,7 +7,7 @@
     <atom:link href="http://astrobiased.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Exploratory Data Analysis &amp; Graphics</title>
+        <title>Exploratory Data Analysis and Graphics</title>
         <description>&lt;p&gt;In data science, or any related quantitative field, we strive to understand and leverage our data for our objectives. These data will usually be part of a bigger project that we’re working on where the workflow looks something like the following:&lt;/p&gt;
 
 &lt;ol&gt;
